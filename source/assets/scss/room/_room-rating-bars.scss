@@ -1,0 +1,120 @@
+/**
+ *
+ * Room Rating Bars
+ *
+ */
+
+.rating-bars {
+	display: flex;
+}
+	// Rating Bars
+	.rating-bars__bars {
+		width: 30px;
+		height: 20px;
+		display: flex;
+		align-items: flex-end;
+		margin-right: 0.25rem;
+
+		.bar {
+			height: 100%;
+			background-color: rgba(255,255,255,.2);
+			margin: 0 1px;
+			width: 3px;
+
+			&:nth-child(1) {
+				height: 40%;
+			}
+			&:nth-child(2) {
+				height: 55%;
+			}
+			&:nth-child(3) {
+				height: 70%;
+			}
+			&:nth-child(4) {
+				height: 85%;
+			}
+			&:nth-child(5) {
+				height: 100%;
+			}
+		}
+
+		// 1 Bar
+		&.rating-bars__bars-1 {
+
+			.bar {
+				&:nth-child(1) {
+					background-color: theme-color("primary");
+				}
+			}
+		}
+
+		// 2 Bars
+		&.rating-bars__bars-2 {
+
+			.bar {
+				&:nth-child(1),
+				&:nth-child(2) {
+					background-color: theme-color("primary");
+				}
+			}
+		}
+
+		// 3 Bars
+		&.rating-bars__bars-3 {
+
+			.bar {
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					background-color: theme-color("primary");
+				}
+			}
+		}
+
+		// 4 Bars
+		&.rating-bars__bars-4 {
+
+			.bar {
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4) {
+					background-color: theme-color("primary");
+				}
+			}
+		}
+
+		// 5 Bars
+		&.rating-bars__bars-5 {
+
+			.bar {
+				background-color: theme-color("primary");
+			}
+		}
+	}
+
+	// Rating Numbers
+	.rating-bars__numbers {
+		display: inline-block;
+		font-family: $font-family-accent;
+		font-size: $h3-font-size;
+		color: theme-color("light");
+		line-height: 1em;
+	}
+		.rating-bars__number-current {
+			display: inline-block;
+		}
+		.rating-bars__number-overall {
+			display: inline-block;
+			font-size: .5em;
+			line-height: 1.2em;
+			vertical-align: top;
+			margin-left: -0.15em;
+			// color: theme-color("primary");
+
+			&::before {
+				content: "/";
+				display: inline-block;
+				margin-right: 0.25rem;
+			}
+		}

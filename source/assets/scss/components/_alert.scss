@@ -1,0 +1,103 @@
+//
+// Base styles
+//
+
+.alert {
+	padding: $alert-padding-y $alert-padding-x;
+	margin-bottom: $alert-margin-bottom;
+	border: $alert-border-width solid transparent;
+	@include border-radius($alert-border-radius);
+}
+
+// Headings for larger alerts
+.alert-heading {
+	// Specified to prevent conflicts of changing $headings-color
+	color: inherit;
+}
+
+// Provide class for links that match alerts
+.alert-link {
+	font-weight: $alert-link-font-weight;
+}
+
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissible {
+	// Adjust close link position
+	.close {
+		position: relative;
+		top: -$alert-padding-y;
+		right: -$alert-padding-x;
+		padding: $alert-padding-y $alert-padding-x;
+		color: inherit;
+	}
+}
+
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+	.alert-#{$color} {
+		@include alert-variant(theme-color-level($color, 1), transparent, theme-color("light"));
+	}
+}
+
+// Alert Icon
+.alert {
+	padding-left: 80px;
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 60px;
+		text-align: center;
+		bottom: 0;
+		background-color: rgba(255,255,255,.2);
+	}
+
+	&::after {
+		content: "\e617";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 60px;
+		height: 30px;
+		text-align: center;
+		font-size: 1.25rem;
+		font-family: 'simple-line-icons';
+		transform: translateY(-50%);
+		z-index: 1;
+	}
+
+	&.alert-success {
+
+		&::after {
+			content: "\e080";
+		}
+	}
+
+	&.alert-info {
+
+		&::after {
+			content: "\e08b";
+		}
+	}
+
+	&.alert-danger {
+
+		&::after {
+
+			content: "\e082";
+		}
+	}
+}

@@ -1,0 +1,133 @@
+/*
+Template Name: Escapium
+Template URI: https://themeforest.net/item/escapium-escape-room-game-html-template/21117207
+Author: Dan Fisher
+Author URI: https://themeforest.net/user/dan_fisher
+Description: HTML Template for Escape Room Games
+Version: 1.3.0
+*/
+
+/*
+File Name:    style.css
+Written by:   Dan Fisher - (https://themeforest.net/user/dan_fisher)
+Description:  General styling for template (including Header, Footer, Sidebar)
+*/
+
+/* Table of Content
+==================================================
+
+	#Imports
+
+	#Content
+
+	#Components
+
+	#Base
+		- Header
+		- Header Navigation
+		- Header Search
+		- Page Header
+		- Content
+		- Footer
+		- 404 Error Page
+		- Basic WP styles
+		- Misc
+		- Helpers
+		- Preloader
+
+	#Widgets
+		- Widgets common styles
+		- Widget Schedule
+		- Widget Social Links
+		- Widget Categories
+		- Widget Posts
+		- Widgets Tags
+		- Widget Instagram
+		- Widget Archive
+
+	#Blog
+		- Post
+		- Pagination
+		- Post Author
+		- Post Comments
+		- Post Grid
+
+	#Rooms
+		- Room Rating
+		- Room Rating Bars
+		- Room Meta Info
+		- Room Filter
+		- Room General
+		- Room Single
+*/
+
+// Basic Imports
+@import "config/imports";
+
+// Content
+@import "content/type";
+@import "content/section";
+
+// Components
+@import "components/accordion";
+@import "components/alert";
+@import "components/box";
+@import "components/breadcrumb";
+@import "components/buttons";
+@import "components/certificates";
+@import "components/contact-info";
+@import "components/custom-forms";
+@import "components/features-list";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/gmap";
+@import "components/magnific-popup";
+@import "components/social-links";
+@import "components/icobox";
+@import "components/pagination";
+@import "components/pricing-tables";
+@import "components/team";
+@import "components/testimonials";
+@import "components/main-slider";
+
+// Vendors
+@import "../vendor/slick/slick-theme";
+
+// Base
+@import "base/base";
+@import "base/header";
+@import "base/header-nav";
+@import "base/header-search";
+@import "base/page-heading";
+@import "base/content";
+@import "base/footer";
+@import "base/404";
+@import "base/wp-basic";
+@import "base/misc";
+@import "base/helpers";
+@import "base/preloader";
+
+// Widgets
+@import "widgets/widgets";
+@import "widgets/widget-schedule";
+@import "widgets/widget-social-links";
+@import "widgets/widget-categories";
+@import "widgets/widget-posts";
+@import "widgets/widget-tags";
+@import "widgets/widget-instagram";
+@import "widgets/widget-archive";
+
+// Blog
+@import "blog/post";
+@import "blog/pagination";
+@import "blog/post-author";
+@import "blog/post-comments";
+@import "blog/post-grid";
+
+// Rooms
+@import "room/room-rating";
+@import "room/room-rating-bars";
+@import "room/room-meta";
+@import "room/room-filter";
+@import "room/room";
+@import "room/room-single";

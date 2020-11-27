@@ -1,0 +1,15 @@
+// Demo Buttons
+.demo-btn-wrapper {
+
+	.btn + .btn {
+		margin-left: 1em;
+	}
+
+	.btn {
+		margin-bottom: 1rem;
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,126 @@
+/**
+ *
+ * Post Grid
+ *
+ */
+.post-grid {
+	overflow: hidden;
+	margin-bottom: -3rem;
+}
+	.post-grid__item {
+		margin-bottom: 3rem;
+	}
+
+		.post-grid__body {
+			padding: 0 0 0 18px;
+		}
+
+		// Post Thumbnail
+		.post-grid__thumb {
+			position: relative;
+			overflow: hidden;
+			margin: 0;
+
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 50%;
+				background-image: linear-gradient(to bottom, transparent, $body-bg);
+				pointer-events: none;
+				z-index: 1;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+				transform: scale(1.1);
+				transition: transform 0.4s;
+			}
+
+			// Hover
+			&:hover {
+
+				img {
+					transform: scale(1);
+				}
+			}
+		}
+
+		// Post Author
+		.post-grid__author {
+
+		}
+			.post-grid__author-avatar {
+				display: inline-block;
+				width: 34px;
+				height: 34px;
+				overflow: hidden;
+				border-radius: 50%;
+				border: 2px solid $white;
+				vertical-align: middle;
+				margin-right: 0.375rem;
+
+				img {
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		.post-grid__author--on-thumb {
+			position: relative;
+			transform: translateY(-54px);
+			z-index: 1;
+		}
+			.post-grid__author-name {
+				font-family: $font-family-accent;
+				font-size: .6875rem;
+				color: $white;
+			}
+
+		// Post Categories
+		.post-grid__cat {
+			position: relative;
+			padding-bottom: 25px;
+			font-family: $font-family-accent;
+			font-size: .6875rem;
+			line-height: 1.2em;
+			letter-spacing: .15em;
+			margin-bottom: 2rem;
+
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: -18px;
+				background-color: $hr-border-color;
+				width: 30px;
+				height: 4px;
+			}
+
+			a {
+				color: $body-color;
+
+				&:hover {
+					color: $link-hover-color;
+				}
+			}
+		}
+			.post-grid__cat-item {
+				display: inline-block;
+			}
+
+
+		.post-grid__title {
+
+			@include media-breakpoint-down(sm) {
+				font-size: $h4-font-size;
+			}
+		}
+
+		.post-grid__excerpt {
+
+		}

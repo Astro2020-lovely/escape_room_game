@@ -1,0 +1,117 @@
+/**
+ *
+ * Rating
+ *
+ */
+
+.rating {
+	overflow: hidden;
+	position: relative;
+	height: 1em;
+	line-height: 1;
+	font-size: 16px;
+	width: 86px;
+	letter-spacing: 6px;
+	font-family: "Ionicons";
+	font-weight: normal;
+	font-style: normal;
+	margin-bottom: 1rem;
+	white-space: nowrap;
+
+	&::before {
+		color: $rating-color;
+		content: "\f200\f200\f200\f200\f200";
+	}
+
+	.rating__inner {
+		display: block;
+		overflow: hidden;
+		float: left;
+		top: 0;
+		left: 0;
+		position: absolute;
+		padding-top: 1.5em;
+
+		&::before {
+			content: "\f200\f200\f200\f200\f200";
+			color: $rating-color-active;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	// For Demo purpose
+
+	// 1 Star
+	&.rating--1 {
+
+		.rating__inner {
+			width: 20%;
+		}
+	}
+
+	// 1.5 Stars
+	&.rating--1_5 {
+
+		.rating__inner {
+			width: 30%;
+		}
+	}
+
+	// 2 Stars
+	&.rating--2 {
+
+		.rating__inner {
+			width: 40%;
+		}
+	}
+
+	// 2.5 Stars
+	&.rating--2_5 {
+
+		.rating__inner {
+			width: 50%;
+		}
+	}
+
+	// 3 Stars
+	&.rating--3 {
+
+		.rating__inner {
+			width: 60%;
+		}
+	}
+
+	// 3.5 Stars
+	&.rating--3_5 {
+
+		.rating__inner {
+			width: 70%;
+		}
+	}
+
+	// 4 Stars
+	&.rating--4 {
+
+		.rating__inner {
+			width: 80%;
+		}
+	}
+
+	// 4.5 Stars
+	&.rating--4_5 {
+
+		.rating__inner {
+			width: 90%;
+		}
+	}
+
+	// 5 Stars
+	&.rating--5 {
+
+		.rating__inner {
+			width: 100%;
+		}
+	}
+}

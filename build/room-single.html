@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<title>Escapium - Escape Room Game HTML Template</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="HTML Template for Escape Room Game">
+	<meta name="author" content="Dan Fisher">
+	<meta name="keywords" content="escape, room, quest, real, game, life, puzzle, real-life">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="assets/img/favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/favicon-152.png">
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<!-- Google Web Fonts
+	================================================== -->
+	<link href="https://fonts.googleapis.com/css?family=Anton%7CHind:400,700%7CMontserrat:400,700" rel="stylesheet">
+
+	<!-- CSS
+	================================================== -->
+	<!-- Vendor CSS -->
+	<link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/vendor/animate/animate.css" rel="stylesheet">
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/font-icon/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+	<link href="assets/font-icon/ionicons/css/ionicons.min.css" rel="stylesheet">
+	<link href="assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+	<link href="assets/vendor/slick/slick.css" rel="stylesheet">
+
+	<!-- Template CSS-->
+	<link href="assets/css/style.css" rel="stylesheet">
+
+	<!-- Booked CSS-->
+	<link href="assets/css/booked.css" rel="stylesheet">
+
+	<!-- Custom CSS-->
+	<link href="assets/css/custom.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="site-wrapper">
+
+		<div id="js-preloader-overlay" class="preloader-overlay">
+			<div id="js-preloader" class="preloader"></div>
+		</div>
+
+		<!-- Overlay -->
+		<div class="site-overlay"></div>
+		<!-- Overlay / End -->
+
+		<!-- Header
+		================================================== -->
+		<header id="header" class="header">
+		
+			<!-- Logo - Image Based -->
+			<div class="header__logo header__logo--img">
+				<a href="index.html"><img src="assets/img/logo.png" srcset="assets/img/logo@2x.png 2x" alt="Escapium"></a>
+			</div>
+			<!-- Logo - Image Based / End -->
+		
+			<!-- Main Navigation -->
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class=""><a href="index.html">home</a></li>
+					<li class=""><a href="page-about.html">about</a></li>
+					<li class=""><a href="#">features</a>
+						<ul class="main-nav__sub">
+							<li class=""><a href="features-shortcodes.html">Shortcodes</a></li>
+							<li class=""><a href="features-typography.html">Typography</a></li>
+							<li class=""><a href="features-pricing.html">Pricing Tables <span class="badge badge-danger">New</span></a></li>
+							<li class=""><a href="features-404.html">404 Error</a></li>
+							<li class=""><a href="features-faqs.html">FAQs</a></li>
+						</ul>
+					</li>
+					<li class="active"><a href="#">rooms</a>
+						<ul class="main-nav__sub">
+							<li class=""><a href="room-list.html">Rooms - List</a></li>
+							<li class=""><a href="#">Rooms - Grid</a>
+								<ul class="main-nav__sub-2">
+									<li class=""><a href="room-grid-2cols.html">2 cols</a></li>
+									<li class=""><a href="room-grid-3cols.html">3 cols</a></li>
+									<li class=""><a href="room-grid-4cols.html">4 cols</a></li>
+									<li class=""><a href="room-grid-nomargins.html">No Margins</a></li>
+								</ul>
+							</li>
+							<li class=""><a href="room-modern.html">Rooms - Modern</a></li>
+							<li class=""><a href="room-blocks.html">Rooms - Blocks</a></li>
+							<li class="active"><a href="room-single.html">Single Room</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="booking-form.html">booking</a>
+						<ul class="main-nav__sub">
+							<li class=""><a href="booking-form.html">Form</a></li>
+							<li class=""><a href="booking-login.html">Login</a></li>
+							<li class=""><a href="booking-profile.html">Profile</a></li>
+							<li class=""><a href="booking-appointments.html">Appointments</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="blog-right-sidebar.html">blog</a>
+						<ul class="main-nav__sub">
+							<li class=""><a href="blog-right-sidebar.html">Blog - Right Sidebar</a></li>
+							<li class=""><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
+							<li class=""><a href="blog-full-width.html">Blog - Full Width</a></li>
+							<li class=""><a href="blog-post.html">Single Post</a></li>
+						</ul>
+					</li>
+					<li class=""><a href="page-contacts.html">contacts</a></li>
+				</ul>
+		
+			</nav>
+			<!-- Main Navigation / End -->
+		
+			<div class="header__spacer"></div>
+		
+			<!-- Secondary Navigation -->
+			<nav class="header__nav header__nav--secondary">
+		
+				<!-- CTA Button -->
+				<a href="booking-form.html" class="btn btn-outline-secondary nav-btn">
+					<span class="nav-btn__label">Book Now!</span>
+					<i class="nav-btn__icon icon-calendar"></i>
+				</a>
+				<!-- CTA Button / End -->
+		
+				<!-- Secondary Nav -->
+				<ul class="nav-secondary">
+		
+					<!-- Search Form Toggler -->
+					<li class="nav-secondary__search">
+						<div class="search-form-control js-search-form-control">
+							<div class="search-form-toggler"></div>
+							<i class="icon-magnifier search-form-toggler__icon"></i>
+						</div>
+					</li>
+					<!-- Search Form Toggler / End -->
+		
+					<!-- Account -->
+					<li class="nav-secondary__login">
+						<a href="booking-login.html">
+							<i class="icon-user"></i>
+							<span class="link-label">sign in</span>
+						</a>
+					</li>
+					<!-- Account / End -->
+		
+				</ul>
+				<!-- Secondary Nav / End -->
+		
+			</nav>
+			<!-- Secondary Navigation / End -->
+		
+			<!-- Mobile Burger Menu Icon -->
+			<a id="header-mobile__toggle" class="burger-menu-icon">
+				<span class="burger-menu-icon__line"></span>
+				<span class="burger-menu-icon__line"></span>
+				<span class="burger-menu-icon__line"></span>
+			</a>
+			<!-- Mobile Burger Menu Icon / End -->
+		
+		</header>
+		<!-- Header / End -->
+
+		<!-- Room Slider
+		================================================== -->
+		<div class="room-slider-wrapper">
+			<div class="room-slider js-room-single-slick">
+				<div class="room-slider__item room-slider__item--img-1"></div>
+				<div class="room-slider__item room-slider__item--img-2"></div>
+				<div class="room-slider__item room-slider__item--img-3"></div>
+				<div class="room-slider__item room-slider__item--img-4"></div>
+				<div class="room-slider__item room-slider__item--img-5"></div>
+			</div>
+			<!-- Room Title -->
+			<div class="single-room-heading">
+				<div class="container">
+					<h1 class="single-room-heading__title">Magic Imporium</h1>
+				</div>
+			</div>
+			<!-- Room Title / End -->
+		</div>
+		<!-- Room Slider / End -->
+
+		<!-- Content
+		================================================== -->
+		<main class="site-content">
+		
+		<div class="section-content">
+		
+			<div class="container">
+		
+				<!-- Single Room - Content -->
+				<div class="single-room-content">
+					<div class="row">
+						<div class="col-md-8">
+							<!-- Meta -->
+							<div class="room__meta room__meta--lg">
+								<div class="room__meta-item room__meta-item--rating">
+									<div class="room__meta-item-value">
+										<div class="room__complexity rating rating--3">
+											<span class="rating__inner"></span>
+										</div>
+									</div>
+									<div class="room__meta-item-label">Easy</div>
+								</div>
+								<div class="room__meta-item">
+									<div class="room__meta-item-value">
+										<i class="ion-person-stalker"></i> 2-3
+									</div>
+									<div class="room__meta-item-label">Players</div>
+								</div>
+								<div class="room__meta-item">
+									<div class="room__meta-item-value">
+										<i class="icon-clock"></i> 60
+									</div>
+									<div class="room__meta-item-label">Minutes</div>
+								</div>
+							</div>
+							<!-- Meta / End -->
+		
+							<p>Etiam pulvinar enim nec mi tincidunt, convallis hendrerit ligula interdum. Cras condimentum justo sed nunc cursus, ac euismod sem feugiat. In in maximus mauris. Vivamus eget erat non neque dignissim fermentum. Phasellus at dapibus tortor. Sed dapibus sagittis molestie. Donec ullamcorper, sapien eu commodo pulvinar, magna ante pharetra nunc, ut elementum orci erat sed risus. Nunc vel tincidunt ex.</p>
+		
+							<p>Vivamus ultrices dapibus justo, vel pharetra nisi mattis sit amet. Integer faucibus varius mauris sit amet molestie. Integer finibus velit in eleifend sodales. Aenean pulvinar sapien vitae justo imperdiet dignissim. Integer facilisis magna felis, vel interdum ligula consectetur et. Quisque ac porttitor nisl.</p>
+		
+							<p>Aliquam in lectus sed velit viverra sodales ut sit amet enim. Nam sed justo dapibus, volutpat augue non, pulvinar neque. Pellentesque volutpat augue ullamcorper ullamcorper tincidunt. Morbi id aliquam odio. Mauris posuere interdum tellus quis aliquet. In hac habitasse platea dictumst. Pellentesque eget sollicitudin sem, eget tincidunt purus. Nam efficitur felis quis neque malesuada sodales. Aenean sit amet magna pellentesque, congue massa eu, pharetra leo.</p>
+						</div>
+						<div class="col-md-4">
+		
+							<!-- Room Details -->
+							<ul class="room-details">
+								<li class="room-details__item">
+									<i class="fas fa-phone"></i>
+										+1 800 900 1248
+								</li>
+								<li class="room-details__item">
+									<i class="fas fa-envelope"></i>
+									<a href="mailto:support@escapium.com">support@escapium.com</a>
+								</li>
+								<li class="room-details__item">
+									<i class="fab fa-skype"></i>
+									<a href="#">escapium</a>
+								</li>
+								<li class="room-details__item">
+									<i class="fas fa-map-marker-alt"></i>
+									3031 New York St, Miami, FL 33132
+								</li>
+							</ul>
+							<!-- Room Details / End -->
+		
+							<a href="#" class="btn btn-primary btn-lg">Book Now!</a>
+		
+						</div>
+					</div>
+				</div>
+				<!-- Single Room - Content / End -->
+		
+			</div>
+		
+		</div>
+		
+		<!-- Booking Form -->
+		<div class="section-content section-content--secondary">
+			<div class="container">
+		
+				<!-- Section Title - Centered -->
+				<div class="section-heading section-heading--divider-top">
+					<h2 class="section-heading__title">Booking Form</h2>
+				</div>
+				<!-- Section Title - Centered / End -->
+		
+				<div class="row">
+					<div class="col-md-8 ml-md-auto mr-md-auto">
+		
+						<!-- Booking Form -->
+						<div class="booked-calendar-shortcode-wrap">
+							<div class="booked-calendarSwitcher calendar">
+								<p><i class="booked-icon booked-icon-calendar"></i>
+									<select name="booked_calendar_chooser_62251" id="booked_calendar_chooser_62251" class="booked_calendar_chooser">
+										<option value="0">Default Calendar</option>
+										<option class="level-0" value="2">Room #1</option>
+										<option class="level-0" value="3">Room #2</option>
+									</select>
+								</p>
+							</div>
+							<div class="booked-calendar-wrap large" data-default="2017-08-01">
+								<table class="booked-calendar" data-calendar-date="2017-08-01">
+									<thead>
+										<tr>
+											<th colspan="7">
+												<a href="#" data-goto="2017-10-01" class="page-left"><i class="booked-icon booked-icon-arrow-left"></i></a>
+												<span class="calendarSavingState">
+													<i class="booked-icon booked-icon-spinner-clock booked-icon-spin"></i>
+												</span>
+												<span class="monthName">August 2017</span>
+												<a href="#" data-goto="2017-09-01" class="page-right"><i class="booked-icon booked-icon-arrow-right"></i></a>
+											</th>
+										</tr>
+										<tr class="days">
+											<th>Mon</th>
+											<th>Tue</th>
+											<th>Wed</th>
+											<th>Thu</th>
+											<th>Fri</th>
+											<th>Sat</th>
+											<th>Sun</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="week">
+											<td data-date="2017-07-31" class="prev-month prev-date">
+												<span class="date">
+													<span class="number">31</span>
+												</span>
+											</td>
+											<td data-date="2017-08-1" class="prev-date">
+												<span class="date">
+													<span class="number">1</span>
+												</span>
+											</td>
+											<td data-date="2017-08-2" class="prev-date">
+												<span class="date">
+													<span class="number">2</span>
+												</span>
+											</td>
+											<td data-date="2017-08-3" class="prev-date">
+												<span class="date">
+													<span class="number">3</span>
+												</span>
+											</td>
+											<td data-date="2017-08-4" class="prev-date">
+												<span class="date">
+													<span class="number">4</span>
+												</span>
+											</td>
+											<td data-date="2017-08-5" class="prev-date">
+												<span class="date">
+													<span class="number">5</span>
+												</span>
+											</td>
+											<td data-date="2017-08-6" class="prev-date">
+												<span class="date">
+													<span class="number">6</span>
+												</span>
+											</td>
+										</tr>
+										<tr class="week">
+											<td data-date="2017-08-7" class="today prev-date">
+												<span class="date">
+													<span class="number">7</span>
+												</span>
+											</td>
+											<td data-date="2017-08-8" class="active">
+												<span class="date">
+													<span class="number">8</span>
+												</span>
+											</td>
+											<td data-date="2017-08-9">
+												<span class="date">
+													<span class="number">9</span>
+												</span>
+											</td>
+											<td data-date="2017-08-10">
+												<span class="date">
+													<span class="number">10</span>
+												</span>
+											</td>
+											<td data-date="2017-08-11">
+												<span class="date">
+													<span class="number">11</span>
+												</span>
+											</td>
+											<td data-date="2017-08-12">
+												<span class="date">
+													<span class="number">12</span>
+												</span>
+											</td>
+											<td data-date="2017-08-13">
+												<span class="date">
+													<span class="number">13</span>
+												</span>
+											</td>
+										</tr>
+										<tr class="entryBlock">
+											<td colspan="7">
+												<div class="booked-appt-list shown" style="display: block;">
+													<h2><span>Available Appointment on </span><strong>August 8, 2017</strong><span></span></h2>
+													<div class="timeslot bookedClearFix has-title">
+														<span class="timeslot-time">
+															<span class="timeslot-title">Escape Room</span>
+															<span class="timeslot-range"><i class="booked-icon booked-icon-clock"></i>&nbsp;&nbsp;1:00 am – 2:00 am</span>
+															<span class="spots-available">1 space available</span>
+														</span>
+														<span class="timeslot-people">
+															<button data-title="Escape Room" data-timeslot="0100-0200" data-date="2017-10-10" class="new-appt button">
+																<span class="timeslot-mobile-title">Escape Room</span>
+																<span class="button-timeslot">1:00 am – 2:00 am</span>
+																<span class="button-text">Book Room</span>
+																<span class="spots-available">1 space available</span>
+															</button>
+														</span>
+													</div>
+													<div class="timeslot bookedClearFix">
+														<span class="timeslot-time">
+															<span class="timeslot-range"><i class="booked-icon booked-icon-clock"></i>&nbsp;&nbsp;1:00 am – 2:00 am</span>
+															<span class="spots-available">1 space available</span>
+														</span>
+														<span class="timeslot-people">
+															<button data-title="Escape Room" data-timeslot="0100-0200" data-date="2017-10-10" class="new-appt button">
+																<span class="timeslot-mobile-title">Escape Room</span>
+																<span class="button-timeslot">1:00 am – 2:00 am</span>
+																<span class="button-text">Book Room</span>
+																<span class="spots-available">1 space available</span>
+															</button>
+														</span>
+													</div>
+													<div class="timeslot bookedClearFix">
+														<span class="timeslot-time">
+															<span class="timeslot-range"><i class="booked-icon booked-icon-clock"></i>&nbsp;&nbsp;4:00 pm – 6:00 pm</span>
+															<span class="spots-available empty">0 spaces available</span>
+														</span>
+														<span class="timeslot-people">
+															<button data-timeslot="1600-1800" data-date="2017-10-23" class="new-appt button" disabled>
+																<span class="button-timeslot">4:00 pm – 6:00 pm</span>
+																<span class="button-text">Unavailable</span>
+																<span class="spots-available empty">0 spaces available</span>
+															</button>
+														</span>
+													</div>
+													<div class="timeslot bookedClearFix">
+														<span class="timeslot-time">
+															<span class="timeslot-range"><i class="booked-icon booked-icon-clock"></i>&nbsp;&nbsp;1:00 am – 2:00 am</span>
+															<span class="spots-available">1 space available</span>
+														</span>
+														<span class="timeslot-people">
+															<button data-title="Escape Room" data-timeslot="0100-0200" data-date="2017-10-10" class="new-appt button">
+																<span class="timeslot-mobile-title">Escape Room</span>
+																<span class="button-timeslot">1:00 am – 2:00 am</span>
+																<span class="button-text">Book Room</span>
+																<span class="spots-available">1 space available</span>
+															</button>
+														</span>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr class="week">
+											<td data-date="2017-08-14">
+												<span class="date">
+													<span class="number">14</span>
+												</span>
+											</td>
+											<td data-date="2017-08-15">
+												<span class="date">
+													<span class="number">15</span>
+												</span>
+											</td>
+											<td data-date="2017-08-16">
+												<span class="date">
+													<span class="number">16</span>
+												</span>
+											</td>
+											<td data-date="2017-08-17">
+												<span class="date">
+													<span class="number">17</span>
+												</span>
+											</td>
+											<td data-date="2017-08-18">
+												<span class="date">
+													<span class="number">18</span>
+												</span>
+											</td>
+											<td data-date="2017-08-19">
+												<span class="date">
+													<span class="number">19</span>
+												</span>
+											</td>
+											<td data-date="2017-08-20">
+												<span class="date">
+													<span class="number">20</span>
+												</span>
+											</td>
+										</tr>
+										<tr class="week">
+											<td data-date="2017-08-21" class="">
+												<span class="date tooltipster tooltipstered">
+													<span class="number">21</span>
+												</span>
+											</td>
+											<td data-date="2017-08-22" class="booked">
+												<span class="date tooltipster tooltipstered">
+													<span class="number">22</span>
+												</span>
+											</td>
+											<td data-date="2017-08-23">
+												<span class="date">
+													<span class="number">23</span>
+												</span>
+											</td>
+											<td data-date="2017-08-24">
+												<span class="date">
+													<span class="number">24</span>
+												</span>
+											</td>
+											<td data-date="2017-08-25">
+												<span class="date">
+													<span class="number">25</span>
+												</span>
+											</td>
+											<td data-date="2017-08-26">
+												<span class="date">
+													<span class="number">26</span>
+												</span>
+											</td>
+											<td data-date="2017-08-27">
+												<span class="date">
+													<span class="number">27</span>
+												</span>
+											</td>
+										</tr>
+										<tr class="week">
+											<td data-date="2017-08-28" class="">
+												<span class="date tooltipster tooltipstered">
+													<span class="number">28</span>
+												</span>
+											</td>
+											<td data-date="2017-08-29" class="">
+												<span class="date tooltipster tooltipstered">
+													<span class="number">29</span>
+												</span>
+											</td>
+											<td data-date="2017-08-30">
+												<span class="date">
+													<span class="number">30</span>
+												</span>
+											</td>
+											<td data-date="2017-08-31">
+												<span class="date">
+													<span class="number">31</span>
+												</span>
+											</td>
+											<td data-date="2017-09-1" class="next-month prev-date">
+												<span class="date">
+													<span class="number">1</span>
+												</span>
+											</td>
+											<td data-date="2017-09-2" class="next-month prev-date">
+												<span class="date">
+													<span class="number">2</span>
+												</span>
+											</td>
+											<td data-date="2017-09-3" class="next-month prev-date">
+												<span class="date">
+													<span class="number">3</span>
+												</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- Booking Form / End -->
+					</div>
+				</div>
+		
+			</div>
+		</div>
+		<!-- Booking Form / End -->
+		
+		<!-- Related Rooms -->
+		<div class="section-content">
+			<div class="container">
+		
+				<h2>Other Rooms</h2>
+		
+				<!-- Rooms Grid - 3 cols -->
+				<div class="row rooms rooms--grid js-rooms-related slick--arrows-top">
+		
+					<!-- Room #9 -->
+					<div class="room col-sm-6 col-md-4 room--category-normal">
+						<div class="room__inner">
+							<div class="room__body">
+								<!-- Rating -->
+								<div class="room__complexity rating rating--3">
+									<span class="rating__inner"></span>
+								</div>
+								<!-- Rating / End -->
+								<!-- Title -->
+								<h2 class="room__title"><a href="room-single.html">Back To The Future</a></h2>
+								<!-- Title / End -->
+								<!-- Meta -->
+								<div class="room__meta">
+									<div class="room__meta-item">
+										<i class="ion-person-stalker"></i> 3-4
+									</div>
+									<div class="room__meta-item">
+										<i class="icon-clock"></i> 60
+									</div>
+									<div class="room__meta-item">
+										<i class="ion-location"></i> New York 3031
+									</div>
+								</div>
+								<!-- Meta / End -->
+							</div>
+							<!-- Image -->
+							<figure class="room__img">
+								<a href="room-single.html"><img src="assets/img/samples/room-grid-3-img9.jpg" alt=""></a>
+							</figure>
+							<!-- Image / End -->
+						</div>
+					</div>
+					<!-- Room #9 / End -->
+		
+					<!-- Room #2 -->
+					<div class="room col-sm-6 col-md-4 room--category-hard">
+						<div class="room__inner">
+							<div class="room__body">
+								<!-- Rating -->
+								<div class="room__complexity rating rating--4">
+									<span class="rating__inner"></span>
+								</div>
+								<!-- Rating / End -->
+								<!-- Title -->
+								<h2 class="room__title"><a href="room-single.html">The Cure</a></h2>
+								<!-- Title / End -->
+								<!-- Meta -->
+								<div class="room__meta">
+									<div class="room__meta-item">
+										<i class="ion-person-stalker"></i> 2-3
+									</div>
+									<div class="room__meta-item">
+										<i class="icon-clock"></i> 60
+									</div>
+									<div class="room__meta-item">
+										<i class="ion-location"></i> Los Angeles 20198
+									</div>
+								</div>
+								<!-- Meta / End -->
+							</div>
+							<!-- Image -->
+							<figure class="room__img">
+								<a href="room-single.html"><img src="assets/img/samples/room-grid-3-img2.jpg" alt=""></a>
+							</figure>
+							<!-- Image / End -->
+						</div>
+					</div>
+					<!-- Room #2 / End -->
+		
+					<!-- Room #3 -->
+					<div class="room col-sm-6 col-md-4 room--category-easy">
+						<div class="room__inner">
+							<div class="room__body">
+								<!-- Rating -->
+								<div class="room__complexity rating rating--2">
+									<span class="rating__inner"></span>
+								</div>
+								<!-- Rating / End -->
+								<!-- Title -->
+								<h2 class="room__title"><a href="room-single.html">Burlesque</a></h2>
+								<!-- Title / End -->
+								<!-- Meta -->
+								<div class="room__meta">
+									<div class="room__meta-item">
+										<i class="ion-person-stalker"></i> 3-5
+									</div>
+									<div class="room__meta-item">
+										<i class="icon-clock"></i> 60
+									</div>
+									<div class="room__meta-item">
+										<i class="ion-location"></i> Beverly Hills 90210
+									</div>
+								</div>
+								<!-- Meta / End -->
+							</div>
+							<!-- Image -->
+							<figure class="room__img">
+								<a href="room-single.html"><img src="assets/img/samples/room-grid-3-img3.jpg" alt=""></a>
+							</figure>
+							<!-- Image / End -->
+						</div>
+					</div>
+					<!-- Room #3 / End -->
+		
+					<!-- Room #4 -->
+					<div class="room col-sm-6 col-md-4 room--category-hard">
+						<div class="room__inner">
+							<div class="room__body">
+								<!-- Rating -->
+								<div class="room__complexity rating rating--5">
+									<span class="rating__inner"></span>
+								</div>
+								<!-- Rating / End -->
+								<!-- Title -->
+								<h2 class="room__title"><a href="room-single.html">Prison Break</a></h2>
+								<!-- Title / End -->
+								<!-- Meta -->
+								<div class="room__meta">
+									<div class="room__meta-item">
+										<i class="ion-person-stalker"></i> 4-6
+									</div>
+									<div class="room__meta-item">
+										<i class="icon-clock"></i> 60
+									</div>
+									<div class="room__meta-item">
+										<i class="ion-location"></i> New York 3031
+									</div>
+								</div>
+								<!-- Meta / End -->
+							</div>
+							<!-- Image -->
+							<figure class="room__img">
+								<a href="room-single.html"><img src="assets/img/samples/room-grid-3-img4.jpg" alt=""></a>
+							</figure>
+							<!-- Image / End -->
+						</div>
+					</div>
+					<!-- Room #4 / End -->
+		
+					<!-- Room #5 -->
+					<div class="room col-sm-6 col-md-4 room--category-easy">
+						<div class="room__inner">
+							<div class="room__body">
+								<!-- Rating -->
+								<div class="room__complexity rating rating--2">
+									<span class="rating__inner"></span>
+								</div>
+								<!-- Rating / End -->
+								<!-- Title -->
+								<h2 class="room__title"><a href="room-single.html">The Hospital</a></h2>
+								<!-- Title / End -->
+								<!-- Meta -->
+								<div class="room__meta">
+									<div class="room__meta-item">
+										<i class="ion-person-stalker"></i> 2-3
+									</div>
+									<div class="room__meta-item">
+										<i class="icon-clock"></i> 60
+									</div>
+									<div class="room__meta-item">
+										<i class="ion-location"></i> New York 3031
+									</div>
+								</div>
+								<!-- Meta / End -->
+							</div>
+							<!-- Image -->
+							<figure class="room__img">
+								<a href="room-single.html"><img src="assets/img/samples/room-grid-3-img5.jpg" alt=""></a>
+							</figure>
+							<!-- Image / End -->
+						</div>
+					</div>
+					<!-- Room #5 / End -->
+		
+					<!-- Room #6 -->
+					<div class="room col-sm-6 col-md-4 room--category-easy">
+						<div class="room__inner">
+							<div class="room__body">
+								<!-- Rating -->
+								<div class="room__complexity rating rating--3">
+									<span class="rating__inner"></span>
+								</div>
+								<!-- Rating / End -->
+								<!-- Title -->
+								<h2 class="room__title"><a href="room-single.html">Abandoned Factory</a></h2>
+								<!-- Title / End -->
+								<!-- Meta -->
+								<div class="room__meta">
+									<div class="room__meta-item">
+										<i class="ion-person-stalker"></i> 6-8
+									</div>
+									<div class="room__meta-item">
+										<i class="icon-clock"></i> 120
+									</div>
+									<div class="room__meta-item">
+										<i class="ion-location"></i> Oklahoma City 2179
+									</div>
+								</div>
+								<!-- Meta / End -->
+							</div>
+							<!-- Image -->
+							<figure class="room__img">
+								<a href="room-single.html"><img src="assets/img/samples/room-grid-3-img6.jpg" alt=""></a>
+							</figure>
+							<!-- Image / End -->
+						</div>
+					</div>
+					<!-- Room #6 / End -->
+		
+				</div>
+				<!-- Rooms Grid - 3 cols / End  -->
+		
+			</div>
+		</div>
+		<!-- Related Rooms / End -->
+		
+		</main>
+
+		<!-- Footer
+		================================================== -->
+		<footer id="footer" class="footer">
+		
+			<!-- Footer Widget -->
+			<div class="footer-widgets">
+				<div class="container">
+					<div class="row footer-widgets__row footer-widgets__row--is-numbered">
+						<div class="col-xs-12 col-sm-6 col-lg-3">
+							<!-- Widget: Address -->
+							<div class="widget widget--footer">
+								<div class="widget__header">
+									<h4 class="widget__title">Our Address</h4>
+								</div>
+								<div class="widget__content">
+									<address>
+										<p>
+											Escape Room Ltd.<br>
+											2390 RoadHill St., Suite 100<br>
+											North Downtown, NY 82153
+										</p>
+		
+										<p>
+											Email: <a href="mailto:info@escapium.com">info@escapium.com</a><br>
+											Tel: +1 800 900 1248
+										</p>
+									</address>
+								</div>
+							</div>
+							<!-- Widget: Address / End -->
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-3">
+							<!-- Widget: Links -->
+							<div class="widget widget--footer widget_nav_menu">
+								<div class="widget__header">
+									<h4 class="widget__title">Useful Links</h4>
+								</div>
+								<div class="widget__content">
+									<ul>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Gallery</a></li>
+										<li><a href="#">Plan an Event</a></li>
+										<li><a href="#">Pricing Packages</a></li>
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">Contact</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- Widget: Links / End -->
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-3">
+							<!-- Widget: Schedule -->
+							<div class="widget widget--footer widget-schedule">
+								<div class="widget__header">
+									<h4 class="widget__title">Working Hours</h4>
+								</div>
+								<div class="widget__content">
+									<ul class="schedule schedule-list">
+										<li class="schedule__item">
+											<span class="schedule__title">Monday:</span>
+											<span class="schedule__time">6pm - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Tuesday:</span>
+											<span class="schedule__time">5pm - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Wednesday:</span>
+											<span class="schedule__time">Closed</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Thursday:</span>
+											<span class="schedule__time">6pm - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Friday:</span>
+											<span class="schedule__time">2pm - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Saturday:</span>
+											<span class="schedule__time">11am - 11pm</span>
+										</li>
+										<li class="schedule__item">
+											<span class="schedule__title">Sunday</span>
+											<span class="schedule__time">11am - 9pm</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- Widget: Schedule / End -->
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-3">
+							<!-- Widget: Social Links -->
+							<div class="widget widget--footer widget-social">
+								<div class="widget__header">
+									<h4 class="widget__title">Social Links</h4>
+								</div>
+								<div class="widget__content">
+									<ul class="social-links social-links--circle">
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-facebook-f"></i></a>
+										</li>
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-twitter"></i></a>
+										</li>
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-instagram"></i></a>
+										</li>
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-tripadvisor"></i></a>
+										</li>
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-yelp"></i></a>
+										</li>
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-youtube"></i></a>
+										</li>
+										<li class="social-links__item">
+											<a class="social-links__link" href="#"><i class="fab fa-google-plus-g"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- Widget: Social Links / End -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Footer Widgets / End -->
+		
+			<!-- Footer Copyright -->
+			<div class="footer-copyright">
+				<div class="container">
+		
+					<!-- Logo - Image Based -->
+					<div class="footer__logo footer__logo--img">
+						<a href="index.html"><img src="assets/img/footer-logo.png" srcset="assets/img/footer-logo@2x.png 2x" alt="Escapium Logo"></a>
+					</div>
+					<!-- Logo - Image Based / End -->
+		
+					<div class="footer-copyright__txt">
+						Copyright &copy; 2019 Escapium &nbsp;|&nbsp; All Rights Reserved
+					</div>
+				</div>
+			</div>
+			<!-- Footer Copyright / End -->
+		</footer>
+		<!-- Footer / End -->
+		
+		<!-- Search Form -->
+		<i class="js-search-form-close search-form-close icon-close"></i>
+		<form action="#" class="search-form-overlay">
+			<div class="search-input">
+				<input type="text" name="input-search" class="input-search" placeholder="Enter your search...">
+				<button type="submit" class="submit">
+					<i class="icon-arrow-right"></i>
+				</button>
+			</div>
+		</form>
+		<!-- Search Form / End -->
+
+	</div><!-- .site-wrapper -->
+
+	<!-- Javascript Files
+	================================================== -->
+	<!-- Vendors JS -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/jquery/jquery-migrate.min.js"></script>
+	
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script defer src="assets/font-icon/font-awesome/js/all.min.js"></script>
+	
+	<!-- Core JS -->
+	<script src="assets/js/core.js"></script>
+	
+	<!-- Template JS -->
+	<script src="assets/js/init.js"></script>
+
+</body>
+</html>

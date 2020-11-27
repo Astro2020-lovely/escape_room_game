@@ -1,0 +1,57 @@
+/**
+ *
+ * Post Author
+ *
+ */
+
+.post-author {
+	margin-bottom: 5rem;
+
+	@include media-breakpoint-up(md) {
+		margin-left: 34px;
+	}
+}
+
+	// Post Author - Header
+	.post-author__header {
+		display: flex;
+		align-items: center;
+		padding-bottom: 2rem;
+		flex-wrap: wrap;
+
+		@include media-breakpoint-up(md) {
+			margin-left: -( 34px + $box-outline-padding );
+		}
+	}
+		.post-author__avatar {
+			flex-shrink: 1;
+			margin: 0 1rem 0 0;
+			overflow: hidden;
+			border-radius: 50%;
+		}
+		.post-author__info {
+
+		}
+			.post-author__name {
+				margin-bottom: .2em;
+				font-size: 1.25rem;
+			}
+			.post-author__nickname {
+				font-size: .6875rem;
+				font-family: $font-family-accent;
+				margin-bottom: 0;
+			}
+		.post-author__links {
+			margin-left: auto;
+		}
+			.post-author__link {
+				margin-left: .5rem;
+			}
+
+	// Post Author - Content
+	.post-author__content {
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}

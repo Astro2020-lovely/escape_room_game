@@ -1,0 +1,134 @@
+/**
+ *
+ * Posts
+ *
+ */
+
+.widget_posts {
+
+
+	.posts-list {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 0 -20px;
+	}
+		.posts-list__item {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
+			backface-visibility: hidden;
+
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				opacity: 0;
+				transition: opacity .3s linear;
+			}
+
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background-color: rgba(theme-color("dark"), .75);
+				opacity: 0;
+				transition: opacity .3s linear;
+			}
+
+			&:hover {
+
+				&::before {
+					opacity: 1;
+				}
+
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+			.posts-list__holder {
+				min-height: 90px;
+				padding: 20px;
+				position: relative;
+				z-index: 1;
+				display: flex;
+				align-items: center;
+
+				@include media-breakpoint-only(md) {
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+				@include media-breakpoint-up(xl) {
+					padding-right: 40px;
+				}
+			}
+			.posts-list__date {
+				color: $body-color;
+				font-family: $font-family-accent;
+				text-transform: uppercase;
+				font-size: .625rem;
+				padding-right: 46px;
+				margin-right: 20px;
+				position: relative;
+
+				@include media-breakpoint-only(md) {
+					padding-right: 26px;
+					margin-right: 14px;
+				}
+
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					width: 24px;
+					height: 1px;
+					background-color: rgba(255,255,255,.3);
+					overflow: hidden;
+
+					@include media-breakpoint-only(md) {
+						width: 16px;
+					}
+				}
+			}
+			.posts-list__title {
+				font-size: .75rem;
+				line-height: 1.25em;
+				text-transform: uppercase;
+				margin-bottom: 0;
+			}
+
+
+		// For Demo Only
+		.posts-list__item--post-1 {
+
+			&::before {
+				background-image: url("../../assets/img/samples/post-widget-1.jpg");
+			}
+		}
+		.posts-list__item--post-2 {
+
+			&::before {
+				background-image: url("../../assets/img/samples/post-widget-2.jpg");
+			}
+		}
+		.posts-list__item--post-3 {
+
+			&::before {
+				background-image: url("../../assets/img/samples/post-widget-3.jpg");
+			}
+		}
+}

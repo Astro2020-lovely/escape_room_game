@@ -1,0 +1,40 @@
+/**
+ *
+ * Breadcrumbs
+ *
+ */
+
+.breadcrumb {
+	padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+	margin-bottom: 1rem;
+	list-style: none;
+	background-color: $breadcrumb-bg;
+}
+
+.breadcrumb-item {
+	float: none;
+	display: inline-block;
+	font-family: $breadcrumb-font-family;
+	font-size: $breadcrumb-font-size;
+	font-weight: $breadcrumb-font-weight;
+	text-transform: $breadcrumb-text-transform;
+
+	@include media-breakpoint-down(sm) {
+		font-size: $breadcrumb-font-size * 0.833;
+	}
+
+	+ .breadcrumb-item::before {
+		padding-right: $breadcrumb-item-padding;
+		color: $breadcrumb-divider-color;
+		content: "#{$breadcrumb-divider}";
+
+		@include media-breakpoint-down(sm) {
+			padding-right: $breadcrumb-item-padding * 0.833;
+			padding-left: $breadcrumb-item-padding * 0.833;
+		}
+	}
+
+	&.active {
+		color: $breadcrumb-active-color;
+	}
+}

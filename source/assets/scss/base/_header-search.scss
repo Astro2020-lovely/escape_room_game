@@ -1,0 +1,257 @@
+/**
+ *
+ * Header Search Form
+ *
+ */
+
+$color-placeholder: rgba(theme-color("light"), .33);
+$search-overlay-color: rgba(0,0,0,.95);
+$search-toggler-size: 36px;
+
+html {
+
+	&.search-active {
+		overflow-x: hidden;
+	}
+}
+
+body {
+
+	/* Search Active */
+	&.search-active {
+		overflow: hidden;
+
+		.search-form-overlay {
+			opacity: 1;
+			transform: none;
+			pointer-events: all;
+			z-index: 104;
+		}
+
+		.search-form-close {
+			opacity: 1;
+			transform: rotate(-90deg);
+			z-index: 999;
+		}
+
+		.search-form-control {
+			cursor: default;
+
+			.search-form-toggler {
+				transform: scale(120);
+				background-color: $search-overlay-color;
+				z-index: 9;
+			}
+			.search-form-toggler__icon {
+				opacity: 0;
+			}
+		}
+
+	}
+}
+
+
+/* Close Icon */
+
+.search-form-close {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	color: theme-color("light");
+	cursor: pointer;
+	font-size: 2rem;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		transform: rotate(0);
+	}
+
+	@include media-breakpoint-up(sm) {
+		font-size: 2.5rem;
+		top: 1.5rem;
+		right: 1.5rem;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: 3rem;
+		top: 2rem;
+		right: 2rem;
+	}
+}
+
+
+/* Search Form */
+.search-form-overlay {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	pointer-events: none;
+	opacity: 0;
+	padding-left: 10%;
+	padding-right: 10%;
+	transform: translateY( 40px );
+	transition: all 0.3s ease-in-out;
+	text-align: center;
+}
+
+
+/* Search Input */
+
+.search-input {
+	position: relative;
+	margin: 0 auto;
+	transform: translateY(-50%);
+
+	@include media-breakpoint-up(sm) {
+
+	}
+
+	@include media-breakpoint-up(md) {
+
+	}
+
+	@include media-breakpoint-up(lg) {
+		width: 840px;
+		max-width: 80%;
+	}
+
+	input[type="text"] {
+		color: #fff;
+		font-size: 1.5rem;
+		line-height: 1.5em;
+		border: 0;
+		outline: 0;
+		background-color: transparent;
+		border-radius: 0;
+		padding-left: 0;
+		-webkit-appearance: none;
+		vertical-align: top;
+		border-bottom: 2px solid theme-color("secondary");
+		width: 100%;
+		padding-right: 40px;
+		transition: all 0.2s ease-in-out;
+
+		@include media-breakpoint-up(sm) {
+			font-size: 2rem;
+		}
+
+		@include media-breakpoint-up(md) {
+			font-size: 2.5rem;
+			padding-right: 50px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			font-size: 3rem;
+			padding-right: 60px;
+		}
+
+		&:focus,
+		&:active {
+			border-bottom-color: theme-color("light");
+		}
+	}
+	::-webkit-input-placeholder {
+		color: $color-placeholder;
+	}
+	:-moz-placeholder {
+		color: $color-placeholder;
+		opacity: 1;
+	}
+	:-ms-input-placeholder {
+		color: $color-placeholder;
+	}
+
+	.submit {
+		background-color: transparent;
+		-webkit-appearance: none;
+		border: none;
+		color: theme-color("light");
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		padding: 0;
+		margin: 0;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		transform: translateY(-50%);
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		i {
+			display: inline-block;
+			line-height: 30px;
+			position: relative;
+			top: -4px;
+		}
+
+		@include media-breakpoint-up(sm) {
+
+		}
+
+		@include media-breakpoint-up(md) {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+
+			i {
+				font-size: 1.5em;
+				line-height: 40px;
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+
+			i {
+				font-size: 2em;
+				line-height: 50px;
+			}
+		}
+	}
+}
+
+
+/* Control btn */
+
+.search-form-control {
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	width: $search-toggler-size;
+	height: $search-toggler-size;
+	vertical-align: middle;
+
+	.search-form-toggler {
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: $search-toggler-size;
+		height: $search-toggler-size;
+		border-radius: 100%;
+		background-color: transparent;
+		transform-origin: 50%;
+		transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.search-form-toggler__icon {
+		display: block;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+
+		&:hover {
+			color: $link-hover-color;
+		}
+	}
+}

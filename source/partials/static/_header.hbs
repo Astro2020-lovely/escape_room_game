@@ -1,0 +1,111 @@
+<!-- Header
+================================================== -->
+<header id="header" class="header">
+
+	<!-- Logo - Image Based -->
+	<div class="header__logo header__logo--img">
+		<a href="index.html"><img src="{{../root}}assets/img/logo.png" srcset="{{../root}}assets/img/logo@2x.png 2x" alt="{{global.site-name}}"></a>
+	</div>
+	<!-- Logo - Image Based / End -->
+
+	<!-- Main Navigation -->
+	<nav class="main-nav">
+		<ul class="main-nav__list">
+			<li class="{{#ifpage 'index'}}active{{/ifpage}}"><a href="index.html">home</a></li>
+			<li class="{{#ifpage 'page-about'}}active{{/ifpage}}"><a href="page-about.html">about</a></li>
+			<li class="{{#ifpage 'features-shortcodes' 'features-typography' 'features-404' 'features-faqs'}}active{{/ifpage}}"><a href="#">features</a>
+				<ul class="main-nav__sub">
+					<li class="{{#ifpage 'features-shortcodes'}}active{{/ifpage}}"><a href="features-shortcodes.html">Shortcodes</a></li>
+					<li class="{{#ifpage 'features-typography'}}active{{/ifpage}}"><a href="features-typography.html">Typography</a></li>
+					<li class="{{#ifpage 'features-pricing'}}active{{/ifpage}}"><a href="features-pricing.html">Pricing Tables <span class="badge badge-danger">New</span></a></li>
+					<li class="{{#ifpage 'features-404'}}active{{/ifpage}}"><a href="features-404.html">404 Error</a></li>
+					<li class="{{#ifpage 'features-faqs'}}active{{/ifpage}}"><a href="features-faqs.html">FAQs</a></li>
+				</ul>
+			</li>
+			<li class="{{#ifpage 'room-list' 'room-grid-2cols' 'room-grid-3cols' 'room-grid-4cols' 'room-grid-nomargins' 'room-modern' 'room-blocks' 'room-single'}}active{{/ifpage}}"><a href="#">rooms</a>
+				<ul class="main-nav__sub">
+					<li class="{{#ifpage 'room-list'}}active{{/ifpage}}"><a href="room-list.html">Rooms - List</a></li>
+					<li class="{{#ifpage 'room-grid-2cols' 'room-grid-3cols' 'room-grid-4cols' 'room-grid-nomargins'}}active{{/ifpage}}"><a href="#">Rooms - Grid</a>
+						<ul class="main-nav__sub-2">
+							<li class="{{#ifpage 'room-grid-2cols'}}active{{/ifpage}}"><a href="room-grid-2cols.html">2 cols</a></li>
+							<li class="{{#ifpage 'room-grid-3cols'}}active{{/ifpage}}"><a href="room-grid-3cols.html">3 cols</a></li>
+							<li class="{{#ifpage 'room-grid-4cols'}}active{{/ifpage}}"><a href="room-grid-4cols.html">4 cols</a></li>
+							<li class="{{#ifpage 'room-grid-nomargins'}}active{{/ifpage}}"><a href="room-grid-nomargins.html">No Margins</a></li>
+						</ul>
+					</li>
+					<li class="{{#ifpage 'room-modern'}}active{{/ifpage}}"><a href="room-modern.html">Rooms - Modern</a></li>
+					<li class="{{#ifpage 'room-blocks'}}active{{/ifpage}}"><a href="room-blocks.html">Rooms - Blocks</a></li>
+					<li class="{{#ifpage 'room-single'}}active{{/ifpage}}"><a href="room-single.html">Single Room</a></li>
+				</ul>
+			</li>
+			<li class="{{#ifpage 'booking-form' 'booking-login' 'booking-profile' 'booking-appointments'}}active{{/ifpage}}"><a href="booking-form.html">booking</a>
+				<ul class="main-nav__sub">
+					<li class="{{#ifpage 'booking-form'}}active{{/ifpage}}"><a href="booking-form.html">Form</a></li>
+					<li class="{{#ifpage 'booking-login'}}active{{/ifpage}}"><a href="booking-login.html">Login</a></li>
+					<li class="{{#ifpage 'booking-profile'}}active{{/ifpage}}"><a href="booking-profile.html">Profile</a></li>
+					<li class="{{#ifpage 'booking-appointments'}}active{{/ifpage}}"><a href="booking-appointments.html">Appointments</a></li>
+				</ul>
+			</li>
+			<li class="{{#ifpage 'blog-right-sidebar' 'blog-left-sidebar' 'blog-full-width' 'blog-post'}}active{{/ifpage}}"><a href="blog-right-sidebar.html">blog</a>
+				<ul class="main-nav__sub">
+					<li class="{{#ifpage 'blog-right-sidebar'}}active{{/ifpage}}"><a href="blog-right-sidebar.html">Blog - Right Sidebar</a></li>
+					<li class="{{#ifpage 'blog-left-sidebar'}}active{{/ifpage}}"><a href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
+					<li class="{{#ifpage 'blog-full-width'}}active{{/ifpage}}"><a href="blog-full-width.html">Blog - Full Width</a></li>
+					<li class="{{#ifpage 'blog-post'}}active{{/ifpage}}"><a href="blog-post.html">Single Post</a></li>
+				</ul>
+			</li>
+			<li class="{{#ifpage 'page-contacts'}}active{{/ifpage}}"><a href="page-contacts.html">contacts</a></li>
+		</ul>
+
+	</nav>
+	<!-- Main Navigation / End -->
+
+	<div class="header__spacer"></div>
+
+	<!-- Secondary Navigation -->
+	<nav class="header__nav header__nav--secondary">
+
+		<!-- CTA Button -->
+		<a href="booking-form.html" class="btn btn-outline-secondary nav-btn">
+			<span class="nav-btn__label">Book Now!</span>
+			<i class="nav-btn__icon icon-calendar"></i>
+		</a>
+		<!-- CTA Button / End -->
+
+		<!-- Secondary Nav -->
+		<ul class="nav-secondary">
+
+			<!-- Search Form Toggler -->
+			<li class="nav-secondary__search">
+				<div class="search-form-control js-search-form-control">
+					<div class="search-form-toggler"></div>
+					<i class="icon-magnifier search-form-toggler__icon"></i>
+				</div>
+			</li>
+			<!-- Search Form Toggler / End -->
+
+			<!-- Account -->
+			<li class="nav-secondary__login">
+				<a href="booking-login.html">
+					<i class="icon-user"></i>
+					<span class="link-label">sign in</span>
+				</a>
+			</li>
+			<!-- Account / End -->
+
+		</ul>
+		<!-- Secondary Nav / End -->
+
+	</nav>
+	<!-- Secondary Navigation / End -->
+
+	<!-- Mobile Burger Menu Icon -->
+	<a id="header-mobile__toggle" class="burger-menu-icon">
+		<span class="burger-menu-icon__line"></span>
+		<span class="burger-menu-icon__line"></span>
+		<span class="burger-menu-icon__line"></span>
+	</a>
+	<!-- Mobile Burger Menu Icon / End -->
+
+</header>
+<!-- Header / End -->

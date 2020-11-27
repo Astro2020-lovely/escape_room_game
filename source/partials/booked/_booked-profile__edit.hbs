@@ -1,0 +1,44 @@
+<!-- Edit -->
+<div id="profile-edit" class="tab-pane booked-tab-content fade bookedClearFix" role="tabpanel" aria-labelledby="profile-edit-tab">
+	<h4><i class="booked-icon ion-edit"></i> &nbsp; Edit Profile</h4>
+
+	<form method="get" enctype="multipart/form-data" id="booked-page-form" action="#">
+		<div class="form-group form-group--lg form-avatar">
+			<label for="avatar">Update Avatar</label>
+			<span class="booked-upload-wrap btn btn-default btn-lg btn-block btn-outline-secondary">
+				<span>Choose image ...</span><input class="field" name="avatar" type="file" id="avatar">
+			</span>
+			<span class="hint-p">Recommended size: 100px by 100px or larger</span>
+		</div><!-- .form-nickname -->
+
+		<div class="form-group form-group--lg form-nickname">
+			<label for="nickname">Display Name</label>
+			<input class="text-input form-control" name="nickname" type="text" id="nickname" value="admin">
+		</div><!-- .form-nickname -->
+
+		<div class="form-group form-group--lg form-email">
+			<label for="email">E-mail *</label>
+			<input class="text-input form-control" name="email" type="text" id="email" value="your_email@domain.com">
+		</div><!-- .form-email -->
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group form-group--lg form-password">
+					<input class="text-input form-control" name="pass1" type="password" id="pass1" placeholder="Change Password">
+				</div><!-- .form-password -->
+			</div>
+			<div class="col-md-6">
+				<div class="form-group form-group--lg form-password last">
+					<input class="text-input form-control" name="pass2" type="password" id="pass2" placeholder="Repeat Password">
+				</div><!-- .form-password -->
+			</div>
+		</div>
+
+		<div class="form-submit">
+			<input name="updateuser" type="submit" id="updateuser" class="btn btn-lg btn-block btn-primary" value="Update">
+		</div><!-- .form-submit -->
+		
+	</form><!-- #adduser -->
+
+</div>
+<!-- Edit -->

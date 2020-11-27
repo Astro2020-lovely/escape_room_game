@@ -1,0 +1,86 @@
+/*=============================================
+=            #Base            =
+=============================================*/
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	font-weight: $font-weight-base;
+	line-height: $line-height-base;
+	color: $body-color;
+	background-color: $body-bg;
+	position: relative;
+	overflow-x: hidden;
+}
+
+:root {
+
+	@include media-breakpoint-down(sm) {
+		font-size: .875rem; // 14px
+	}
+}
+
+
+// Site Wrapper
+.site-wrapper {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+.site-content {
+	flex: auto;
+}
+
+.site-overlay {
+	left: 0;
+	top: 0;
+	z-index: 102;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: transparent;
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.4s linear;
+
+	.site-wrapper--has-overlay & {
+
+		@include media-breakpoint-down(md) {
+			visibility: visible;
+			opacity: 1;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+	}
+}
+
+
+// Links
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+	background-color: transparent; // Remove the gray background on active links in IE 10.
+	-webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+	transition: color 0.2s linear;
+
+	@include hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+}
+
+// Images
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*=====  End of #Base  ======*/

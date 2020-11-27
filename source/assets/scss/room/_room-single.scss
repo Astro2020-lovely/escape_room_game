@@ -1,0 +1,146 @@
+/*=============================================
+=            Single Room            =
+=============================================*/
+
+
+/*----------  Room Slider  ----------*/
+
+.room-slider-wrapper {
+	position: relative;
+}
+
+.room-slider {
+	overflow: hidden;
+	position: relative;
+}
+	.room-slider__item {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 280px;
+		width: 100%;
+
+		@include media-breakpoint-up(sm) {
+			height: 360px;
+		}
+
+		@include media-breakpoint-up(md) {
+			height: 480px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			height: 660px;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			background-color: rgba(0,0,0,.5);
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 60%;
+			background-image: linear-gradient(to bottom, transparent, $body-bg);
+		}
+	}
+
+	// Demo Only
+	.room-slider__item--img-1 {
+		background-image: url("../../assets/img/samples/room-single-1.jpg");
+	}
+	.room-slider__item--img-2 {
+		background-image: url("../../assets/img/samples/room-single-2.jpg");
+	}
+	.room-slider__item--img-3 {
+		background-image: url("../../assets/img/samples/room-single-3.jpg");
+	}
+	.room-slider__item--img-4 {
+		background-image: url("../../assets/img/samples/room-single-4.jpg");
+	}
+	.room-slider__item--img-5 {
+		background-image: url("../../assets/img/samples/room-single-5.jpg");
+	}
+
+
+/*----------  Room Title  ----------*/
+.single-room-heading {
+	position: absolute;
+	z-index: 3;
+	bottom: 2rem;
+	width: 100%;
+
+	@include media-breakpoint-up(md) {
+		bottom: 5rem;
+	}
+}
+	.single-room-heading__title {
+		margin-bottom: 0;
+		text-shadow: 0 2px 12px rgba(0,0,0,.42);
+		font-size: 1.75rem;
+
+		@include media-breakpoint-up(md) {
+			font-size: 4.5rem;
+			letter-spacing: -2px;
+		}
+	}
+
+
+
+/**
+ *
+ * Room Details
+ *
+ */
+
+.room-details {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2.5rem 0;
+	font-family: $font-family-accent;
+	font-size: .75rem;
+	text-transform: uppercase;
+}
+	.room-details__item {
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		padding: .75rem 0 .75rem 36px;
+		position: relative;
+
+		[class*="fa-"] {
+			font-weight: normal;
+			font-style: normal;
+			display: block;
+			position: absolute;
+			width: 24px;
+			text-align: center;
+			left: 0;
+			top: 12px;
+			color: #c2c2c2;
+			font-size: 16px;
+			line-height: 1.2em;
+		}
+	}
+
+
+
+/**
+ *
+ * Related Rooms
+ *
+ */
+
+.rooms {
+
+}
+
+/*=====  End of Single Room  ======*/

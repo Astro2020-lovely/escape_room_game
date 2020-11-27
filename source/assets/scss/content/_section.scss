@@ -1,0 +1,371 @@
+/*=============================================
+=            #Section            =
+=============================================*/
+
+.section-content {
+
+}
+	.section-content--secondary {
+		background-color: $section-secondary-bg;
+	}
+
+	.section-content--tertiary {
+		background-color: $section-tertiary-bg;
+
+		a:not([class]) {
+			color: theme-color("secondary");
+		}
+	}
+
+	// Demo
+	.section-content--bg1 {
+		background-image: url('../../assets/img/samples/section-bg-img1.jpg');
+		background-position: 50% 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	// Section Gradien Overlay
+	.section-content--gradient-overlay-left {
+		position: relative;
+
+		.container {
+			position: relative;
+			z-index: 1;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-image: linear-gradient(to left, transparent 0%, rgba($section-secondary-bg, .28) 11%, rgba($section-secondary-bg, .53) 20%, rgba($section-secondary-bg, .73) 30%, rgba($section-secondary-bg, .85) 39%, rgba($section-secondary-bg, .96) 49%, $section-secondary-bg 58%);
+		}
+	}
+
+
+	/**
+	 *
+	 * Section Heading
+	 *
+	 */
+
+	.section-heading {
+		text-align: center;
+		position: relative;
+		margin-bottom: 3rem;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 4.5rem;
+		}
+
+		&.section-heading--mb-sm {
+			margin-bottom: 2rem;
+
+			@include media-breakpoint-up(md) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+		.section-heading__title {
+			font-size: $h1-font-size/2;
+			margin-bottom: 0;
+
+			@include media-breakpoint-up(md) {
+				font-size: $h1-font-size/1.5;
+			}
+
+			@include media-breakpoint-up(lg) {
+				font-size: $h1-font-size;
+			}
+
+			& + .section-heading__subtitle {
+				padding-top: 1rem;
+
+				@include media-breakpoint-up(lg) {
+					padding-top: 2rem;
+				}
+			}
+
+			& + .section-heading__subtitle--default {
+				padding-top: .75rem;
+
+				@include media-breakpoint-up(lg) {
+					padding-top: 1.25rem;
+				}
+			}
+
+			.section-content--tertiary & {
+				color: #3C3C3C;
+			}
+		}
+		.section-heading__subtitle {
+			font-size: .75rem;
+			font-family: $font-family-accent;
+			font-weight: 400;
+			letter-spacing: 0.1em;
+
+			@include media-breakpoint-down(md) {
+				font-size: 0.625rem;
+			}
+
+			&.section-heading__subtitle--default {
+				font-family: $font-family-base;
+				font-size: 1rem;
+				letter-spacing: normal;
+			}
+
+			> a {
+				color: $link-hover-color;
+				display: inline-block;
+				position: relative;
+				padding-bottom: 2px;
+				overflow: hidden;
+
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					right: 0;
+					width: 100%;
+					bottom: 0;
+					height: 1px;
+					background-color: $link-hover-color;
+					transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+				}
+
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					left: 0;
+					width: 100%;
+					bottom: 0;
+					height: 1px;
+					background-color: $link-color;
+					transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+					transform: translateX(-150%);
+				}
+
+				&:hover {
+					color: $link-color;
+
+					&::before {
+						transform: translateX(150%);
+					}
+
+					&::after {
+						transform: translateX(0);
+					}
+				}
+
+
+			}
+
+			.section-content--tertiary & {
+				color: #aaa;
+			}
+		}
+
+	// Divider
+	.section-heading--divider-top {
+		padding-top: 3rem;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			width: 32px;
+			height: 4px;
+			background-color: #333;
+			transform: translate(-50%);
+		}
+
+		&.section-heading--sm {
+			padding-top: 1.25rem;
+		}
+
+		.section-content--tertiary & {
+
+			&::before {
+				background-color: #9B9B9B;
+			}
+		}
+	}
+
+	.section-heading--divider-bottom {
+		padding-bottom: 3rem;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			width: 32px;
+			height: 4px;
+			background-color: #333;
+			transform: translate(-50%);
+		}
+
+		&.section-heading--sm {
+			padding-bottom: 1.25rem;
+		}
+	}
+
+	// Left Alignment
+	.section-heading--left {
+		text-align: left;
+
+		&.section-heading--divider-top::before,
+		&.section-heading--divider-bottom::before {
+			left: 0;
+			transform: translate(0);
+		}
+	}
+
+	// Right Alignment
+	.section-heading--right {
+		text-align: right;
+
+		&.section-heading--divider-top::before,
+		&.section-heading--divider-bottom::before {
+			left: auto;
+			right: 0;
+			transform: translate(0);
+		}
+	}
+
+
+	// Sizes
+	.section-heading--sm {
+		margin-bottom: 2.375rem;
+
+		.section-heading__title {
+			font-size: $h2-font-size;
+		}
+	}
+
+
+
+	/**
+	 *
+	 * Section Media
+	 *
+	 */
+
+	.section-media {
+		position: relative;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+		.section-media__inner {
+			position: relative;
+			z-index: 2;
+			min-height: 200px;
+			padding-top: 60px;
+			padding-bottom: 60px;
+
+			@include media-breakpoint-up(md) {
+				padding-top: 120px;
+				padding-bottom: 120px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				padding-top: 180px;
+				padding-bottom: 180px;
+			}
+
+			@include media-breakpoint-up(xl) {
+				padding-top: 230px;
+				padding-bottom: 230px;
+			}
+		}
+
+		.section-media__link {
+			display: block;
+		}
+
+		// Overlay
+		.section--has-overlay {
+
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				z-index: 1;
+				background-color: rgba( $black, .5 );
+			}
+		}
+
+		.icon-media {
+			display: block;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			border-radius: 50%;
+			background-color: theme-color("primary");
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 24px;
+			color: $white;
+			text-align: center;
+			position: relative;
+
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				background-color: $white;
+				opacity: .1;
+				border-radius: 50%;
+				z-index: -1;
+				transform: scale(1.15);
+				transition: all 0.2s ease;
+			}
+
+			&:hover {
+
+				&::before {
+					transform: scale(1);
+				}
+			}
+
+			i {
+				display: block;
+				transform: translate(2px, 2px);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				font-size: 40px;
+
+				i {
+					transform: translate(4px, 4px);
+				}
+			}
+		}
+
+
+	// Demo Background
+	.section-media--bg1 {
+		background-image: url("../../assets/img/samples/video-placeholder.jpg");
+	}
+
+/*=====  End of #Section  ======*/

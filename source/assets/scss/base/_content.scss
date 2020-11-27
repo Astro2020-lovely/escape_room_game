@@ -1,0 +1,67 @@
+/*=============================================
+=            #Content            =
+=============================================*/
+
+.section-content {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@include media-breakpoint-up(md) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+}
+	.section-content--no-padding {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		@include media-breakpoint-up(md) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+
+	.section-content__inner {
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		@include media-breakpoint-up(md) {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			padding-left: 35px;
+			max-width: 334px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding-top: 80px;
+			padding-bottom: 80px;
+			padding-left: 55px;
+			max-width: 456px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			max-width: 550px;
+		}
+	}
+
+
+.content {
+	margin-bottom: 4rem;
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 0;
+	}
+}
+
+
+/*=====  End of #Content  ======*/

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="38px" viewBox="0 0 34 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+	<title>logo</title>
+	<desc>Created with Sketch.</desc>
+	<defs></defs>
+	<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			<g id="header-desktop-lg" transform="translate(-30.000000, -21.000000)">
+					<g id="header">
+							<g id="logo">
+									<g transform="translate(30.000000, 21.000000)">
+											<rect id="border" stroke="#FFFFFF" stroke-width="4" x="2" y="2" width="30" height="34"></rect>
+											<ellipse id="Oval-4" fill="#FFFFFF" cx="17" cy="14.1181102" rx="5" ry="5.11811024"></ellipse>
+											<polygon id="Rectangle-8" fill="#FFFFFF" points="15 17 19 17 20 29 14 29"></polygon>
+									</g>
+							</g>
+					</g>
+			</g>
+	</g>
+</svg>

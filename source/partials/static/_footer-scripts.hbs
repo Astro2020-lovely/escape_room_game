@@ -1,0 +1,18 @@
+<!-- Javascript Files
+================================================== -->
+<!-- Vendors JS -->
+<script src="{{root}}assets/vendor/jquery/jquery.min.js"></script>
+<script src="{{root}}assets/vendor/jquery/jquery-migrate.min.js"></script>
+
+<script src="{{root}}assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script defer src="{{root}}assets/font-icon/font-awesome/js/all.min.js"></script>
+{{#if gmap_script}}
+<script src="//maps.googleapis.com/maps/api/js?key={{settings.gmap_key}}"></script>
+<script src="{{root}}assets/vendor/gmap3/dist/gmap3.min.js"></script>
+{{/if}}
+
+<!-- Core JS -->
+<script src="{{root}}assets/js/core.js"></script>
+
+<!-- Template JS -->
+<script src="{{root}}assets/js/init.js"></script>

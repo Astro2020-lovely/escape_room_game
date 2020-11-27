@@ -1,0 +1,33 @@
+/**
+ *
+ * Room Filter
+ *
+ */
+
+.filter {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3.75rem;
+	flex-wrap: wrap;
+}
+	.filter__item {
+		margin: 0 .5rem;
+
+		@include media-breakpoint-down(sm) {
+			flex-basis: 50%;
+			min-width: 50%;
+			margin: 0 0 .5rem 0;
+			padding: 0 .5rem;
+		}
+
+		.btn {
+
+			@include media-breakpoint-down(sm) {
+				width: 100%;
+			}
+
+			&:not(.btn-primary):hover {
+				cursor: pointer;
+			}
+		}
+	}

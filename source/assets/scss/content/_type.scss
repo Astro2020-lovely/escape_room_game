@@ -1,0 +1,229 @@
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-bottom: $headings-margin-bottom;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
+	color: $headings-color;
+}
+
+h1, .h1 { font-size: $h1-font-size; }
+h2, .h2 { font-size: $h2-font-size; }
+h3, .h3 { font-size: $h3-font-size; }
+h4, .h4 { font-size: $h4-font-size; }
+h5, .h5 { font-size: $h5-font-size; }
+h6, .h6 { font-size: $h6-font-size; }
+
+.lead {
+	font-size: $lead-font-size;
+	font-weight: $lead-font-weight;
+}
+
+// Type display classes
+.display-1 {
+	font-size: $display1-size;
+	font-weight: $display1-weight;
+	line-height: $display-line-height;
+}
+.display-2 {
+	font-size: $display2-size;
+	font-weight: $display2-weight;
+	line-height: $display-line-height;
+}
+.display-3 {
+	font-size: $display3-size;
+	font-weight: $display3-weight;
+	line-height: $display-line-height;
+}
+.display-4 {
+	font-size: $display4-size;
+	font-weight: $display4-weight;
+	line-height: $display-line-height;
+}
+
+
+//
+// Horizontal rules
+//
+
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: $hr-border-width solid $hr-border-color;
+}
+	.hr--lg {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	.hr--xl {
+		margin-top: 4.5rem;
+		margin-bottom: 4.5rem;
+	}
+
+
+//
+// Emphasis
+//
+
+small,
+.small {
+	font-size: $small-font-size;
+	font-weight: $font-weight-normal;
+}
+
+mark,
+.mark {
+	padding: $mark-padding;
+	background-color: $mark-bg;
+}
+
+
+//
+// Lists
+//
+
+.list-unstyled {
+	@include list-unstyled;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+	@include list-unstyled;
+}
+.list-inline-item {
+	display: inline-block;
+
+	&:not(:last-child) {
+		margin-right: $list-inline-padding;
+	}
+}
+
+/* Lists */
+ol.list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 1.5em;
+	counter-reset: counter;
+
+	li {
+		position: relative;
+		padding: 0 0 .5em 30px;
+
+		&::before {
+			display: inline-block; /* block would also work */
+			position: absolute; /* move this out of the way of the text */
+			left: 0; /* move the counter label into the space from the padding */
+			content: counter(counter) ". ";
+			counter-increment: counter;
+			font-weight: bold;
+			width: 20px;
+			color: $ol-number-color;
+			font-family: $font-family-accent;
+			font-size: 13px;
+		}
+	}
+}
+
+ul.list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 1.5em;
+
+	li {
+		position: relative;
+		padding: 0 0 .5em 30px;
+
+		&::before {
+			display: inline-block; /* block would also work */
+			position: absolute; /* move this out of the way of the text */
+			left: 0; /* move the counter label into the space from the padding */
+			width: 20px;
+			color: theme-color("primary");
+			font-family: $font-family-accent;
+			font-size: 14px;
+			content: "\f122";
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-family: "Ionicons";
+		}
+	}
+}
+
+
+//
+// Misc
+//
+
+// Builds on `abbr`
+.initialism {
+	font-size: 90%;
+	text-transform: uppercase;
+}
+
+// Blockquotes
+.blockquote {
+	margin-bottom: $spacer;
+	font-size: $blockquote-font-size;
+}
+
+.blockquote-footer {
+	display: block;
+	font-size: 80%; // back to default font-size
+	color: $blockquote-small-color;
+
+	&::before {
+		content: "\2014 \00A0"; // em dash, nbsp
+	}
+}
+
+
+// Vertical Title
+.side-title {
+	font-size: $h5-font-size;
+	line-height: 1.2em;
+	letter-spacing: .4em;
+	text-transform: uppercase;
+}
+
+.rotated-text {
+	overflow: hidden;
+
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+
+	@media all and (-ms-high-contrast:none) {
+		/* IE11 */
+		display: none;
+	}
+
+	@supports (-ms-ime-align:auto) {
+		/* Edge */
+		display: none;
+	}
+}
+	.rotated-text__inner {
+		writing-mode: vertical-rl;
+		transform: rotate(-180deg);
+		position: relative;
+		opacity: .38;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 2px;
+			top: -180px;
+			height: 170px;
+			width: 2px;
+			background-color: $white;
+			opacity: .25;
+		}
+	}

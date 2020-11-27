@@ -1,0 +1,28 @@
+/**
+ *
+ * Contact Info
+ *
+ */
+
+.contact-info {
+	padding-top: 2rem;
+}
+
+	.contact-info__item {
+		display: flex;
+		align-items: center;
+		font-size: .875rem;
+		margin-bottom: 1.5rem;
+	}
+		.contact-info__icon {
+			display: block;
+			font-size: 2rem;
+			line-height: 1em;
+			width: 60px;
+			text-align: center;
+			color: $white;
+			margin-right: 20px;
+		}
+		.contact-info__txt {
+
+		}

@@ -1,0 +1,40 @@
+/**
+ *
+ * Features List
+ *
+ */
+
+.features-list {
+
+}
+	.features-list__item {
+		display: flex;
+		align-items: center;
+
+		& + & {
+			margin-top: 2rem;
+
+			@include media-breakpoint-up(md) {
+				margin-top: 3.5rem;
+			}
+		}
+	}
+
+		.features-list__icon {
+			font-size: 32px;
+			line-height: 1em;
+			height: 1em;
+			margin-right: 1rem;
+			color: theme-color("primary");
+
+			@include media-breakpoint-up(md) {
+				font-size: 56px;
+				margin-right: 2rem;
+			}
+		}
+
+		.features-list__title {
+			margin: 0;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}

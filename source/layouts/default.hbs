@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<title>{{global.site-name}} - {{global.site-title}}</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="{{global.description}}">
+	<meta name="author" content="{{global.author}}">
+	<meta name="keywords" content="{{global.keywords}}">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="{{root}}assets/img/favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{root}}assets/img/favicons/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{root}}assets/img/favicons/favicon-152.png">
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<!-- Google Web Fonts
+	================================================== -->
+	<link href="https://fonts.googleapis.com/css?family={{settings.fonts}}" rel="stylesheet">
+
+	<!-- CSS
+	================================================== -->
+	<!-- Vendor CSS -->
+	<link href="{{root}}assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="{{root}}assets/vendor/animate/animate.css" rel="stylesheet">
+	<link href="{{root}}assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="{{root}}assets/font-icon/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+	<link href="{{root}}assets/font-icon/ionicons/css/ionicons.min.css" rel="stylesheet">
+	<link href="{{root}}assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+	<link href="{{root}}assets/vendor/slick/slick.css" rel="stylesheet">
+
+	<!-- Template CSS-->
+	<link href="{{root}}assets/css/style.css" rel="stylesheet">
+
+	<!-- Booked CSS-->
+	<link href="{{root}}assets/css/booked.css" rel="stylesheet">
+
+	<!-- Custom CSS-->
+	<link href="{{root}}assets/css/custom.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="site-wrapper">
+
+		<div id="js-preloader-overlay" class="preloader-overlay">
+			<div id="js-preloader" class="preloader"></div>
+		</div>
+
+		<!-- Overlay -->
+		<div class="site-overlay"></div>
+		<!-- Overlay / End -->
+
+		{{> _header }}
+
+		{{#if main-slider }}
+		{{> _main-slider }}
+		{{else if room-slider }}
+		{{> _room-slider }}
+		{{else}}
+		{{> _page-heading }}
+		{{/if}}
+
+		<!-- Content
+		================================================== -->
+		<main class="site-content">
+		{{> body }}
+		</main>
+
+		{{> _footer }}
+
+	</div><!-- .site-wrapper -->
+
+	{{> _footer-scripts }}
+
+</body>
+</html>

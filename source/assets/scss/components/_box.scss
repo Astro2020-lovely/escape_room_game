@@ -1,0 +1,27 @@
+/**
+ *
+ * Box
+ *
+ */
+
+ .box {
+	background-color: $box-bg;
+	padding: $box-padding / 2;
+	box-shadow: $box-drop-shadow;
+
+	@include media-breakpoint-up(md) {
+		padding: $box-padding;
+	}
+}
+
+.box-outline {
+	background-color: $box-outline-bg;
+	border-width: $box-outline-border-width;
+	border-style: solid;
+	border-color: $box-outline-border-color;
+	padding: $box-outline-padding / 2;
+
+	@include media-breakpoint-up(md) {
+		padding: $box-outline-padding;
+	}
+}

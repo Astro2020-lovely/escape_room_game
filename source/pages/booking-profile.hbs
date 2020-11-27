@@ -1,0 +1,55 @@
+---
+page-heading: "Profile"
+
+breadcrumbs: [
+	{
+		link: "booking-form.html",
+		label: "Booking"
+	},
+	{
+		label: "Profile"
+	}
+]
+---
+
+<div class="section-content">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-8 ml-lg-auto mr-lg-auto">
+
+				<!-- Booked Profile -->
+				<div id="booked-profile-page" class="me">
+
+					{{> _booked-profile-header }}
+
+					<ul class="nav booked-tabs bookedClearFix" id="booked-tabs" role="tablist">
+						<li>
+							<a href="#profile-appointments" data-toggle="tab" id="profile-appointments-tab" class="active"><i class="booked-icon ion-calendar"></i>Upcoming Appointments</a>
+						</li>
+						<li>
+							<a href="#profile-history" data-toggle="tab" id="profile-history-tab"><i class="booked-icon ion-document"></i>Appointment History</a>
+						</li>
+						<li class="edit-button">
+							<a href="#profile-edit" data-toggle="tab" id="profile-edit-tab"><i class="booked-icon ion-edit"></i>Edit Profile</a>
+						</li>
+					</ul>
+
+					<div class="tab-content">
+
+						{{> _booked-profile__upcoming-appointments }}
+
+						{{> _booked-profile__history }}
+
+						{{> _booked-profile__edit }}
+
+					</div>
+
+				</div>
+				<!-- Booked Profile / End -->
+
+			</div>
+		</div>
+
+	</div>
+</div>

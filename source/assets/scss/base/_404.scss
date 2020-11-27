@@ -1,0 +1,47 @@
+/*=============================================
+=            #Error 404            =
+=============================================*/
+
+
+.error-404-container {
+	align-items: center;
+}
+
+	.error-404__number {
+		font-family: $font-family-accent;
+		font-size: 54px;
+		line-height: 1.2em;
+		font-weight: bold;
+		letter-spacing: -0.01em;
+		opacity: .42;
+		text-align: center;
+		padding: 0.2em 0;
+
+		@include media-breakpoint-up(sm) {
+			font-size: 120px;
+		}
+
+		@include media-breakpoint-up(md) {
+			font-size: 160px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			font-size: 200px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			font-size: 240px;
+		}
+	}
+
+	.error-404__content {
+
+	}
+		.error-404__title { }
+
+		.error-404__desc {
+			margin-bottom: 2rem;
+		}
+
+
+/*=====  End of #Error 404  ======*/

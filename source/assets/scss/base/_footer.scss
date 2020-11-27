@@ -1,0 +1,89 @@
+/*=============================================
+=            #Footer            =
+=============================================*/
+
+
+/**
+ *
+ * Footer
+ *
+ */
+
+.footer {
+	background-image: url("../../assets/img/samples/footer-bg.jpg");
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	font-size: $footer-font-size;
+	line-height: $footer-line-height;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		z-index: 1;
+		background-color: $body-bg;
+		opacity: 0.95;
+	}
+}
+
+
+/**
+ *
+ * Footer Widgets Wrapper
+ *
+ */
+
+.footer-widgets {
+	border-top: 1px solid #222;
+	position: relative;
+	z-index: 2;
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	@include media-breakpoint-up(lg) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+}
+
+
+/**
+ *
+ * Footer Copyright
+ *
+ */
+
+.footer-copyright {
+	text-align: center;
+	padding-top: 2.625rem;
+	padding-bottom: 2.625rem;
+	border-top: 1px solid rgba(51,51,51,.5);
+	background-color: rgba(0,0,0,.1);
+	position: relative;
+	z-index: 2;
+}
+	.footer-copyright__txt {
+
+	}
+
+
+
+/* Footer Logo */
+.footer__logo {
+	margin-bottom: $spacer;
+}
+	.footer__logo--txt {
+
+	}
+
+	.footer__logo--img {
+
+	}
+
+/*=====  End of #Footer  ======*/

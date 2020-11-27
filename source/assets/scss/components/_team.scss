@@ -1,0 +1,71 @@
+/**
+ *
+ * Team
+ *
+ */
+
+.team {
+
+}
+.team--grid {
+
+}
+	.team-member {
+		text-align: center;
+
+		@include media-breakpoint-up(sm) {
+			text-align: left;
+		}
+	}
+		.team-member__info {
+			padding: 1.5rem;
+		}
+			.team-member__photo {
+				position: relative;
+				overflow: hidden;
+				margin: 0 auto;
+				text-align: center;
+				display: inline-block;
+
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					top: 0;
+					background-color: rgba( $black, 0.5);
+					transition: all 0.2s ease;
+					pointer-events: none;
+					opacity: 1;
+				}
+
+				&:hover {
+
+					&::before {
+						border: 10px solid theme-color("primary");
+						background-color: transparent;
+					}
+				}
+
+				img {
+					margin: 0 auto;
+				}
+
+				> a {
+
+				}
+			}
+			.team-member__title {
+				margin-bottom: .1em;
+
+				@include media-breakpoint-up(lg) {
+					font-size: $h2-font-size;
+				}
+			}
+			.team-member__meta {
+				font-size: .875rem;
+				font-family: $font-family-accent;
+				font-weight: 400;
+			}

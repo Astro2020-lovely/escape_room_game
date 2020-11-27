@@ -1,0 +1,313 @@
+/*=============================================
+=            #Header            =
+=============================================*/
+
+// Header
+.header {
+	height: $header-height-desktop-mobile;
+	background-color: rgba(27,27,27,.55);
+	position: fixed;
+	display: flex;
+	align-items: center;
+	left: 0;
+	right: 0;
+	transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+	z-index: 103;
+
+	& > * {
+		flex-shrink: 1;
+		min-width: 0;
+	}
+
+	@include media-breakpoint-up(md) {
+		height: $header-height-desktop;
+	}
+}
+
+// Header Pinned
+.pinning-nav {
+
+}
+
+.pinning-nav.pinned {
+	background-color: rgba(20,20,20,.95);
+}
+
+.pinning-nav.unpinned {
+	transform: translateY(-100%);
+	opacity: 0;
+}
+
+.pinning-nav.pinning-top {
+	background-color: rgba(27,27,27,.55);
+}
+
+// Logo
+.header__logo {
+	margin-right: 20px;
+
+	@include media-breakpoint-up(md) {
+		margin-right: 36px;
+	}
+}
+	.header__logo--txt {
+		background-color: theme-color("primary");
+		font-family: $header-logo-font-family;
+		color: $header-logo-font-color;
+		font-size: $header-logo-font-size;
+		text-transform: $header-logo-text-transform;
+		letter-spacing: $header-logo-letter-spacing;
+		padding: $header-logo-padding-y $header-logo-padding-x;
+		transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+		.header--is-scroll & {
+			padding-top: 11px;
+			padding-bottom: 11px;
+			font-size: 1.2rem;
+		}
+
+		> a {
+			color: $header-logo-font-color;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+
+		img {
+			margin-right: 12px;
+		}
+	}
+
+	.header__logo--img {
+		height: 100%;
+
+		img {
+			display: inline-block;
+			transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+			max-height: 100%;
+			max-width: 100%; /*or width: 100%; if so the above line won't be required */
+			height: auto;
+
+			.header--is-scroll & {
+
+			}
+		}
+
+	}
+
+
+// Navigation
+.header__nav {
+
+}
+
+// Navigation Secondary
+.header__nav--secondary {
+	transition: opacity 0.3s ease-in-out;
+
+	@include media-breakpoint-up(lg) {
+		padding-right: 2rem;
+	}
+
+	.site-wrapper--has-overlay & {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+	.nav-secondary {
+		display: inline-block;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-family: $font-family-accent;
+		text-transform: uppercase;
+		font-size: 0.6875rem;
+
+		@include media-breakpoint-up(lg) {
+			padding-left: .5rem;
+		}
+
+		@include media-breakpoint-up(xl) {
+			padding-left: 1rem;
+		}
+
+		> li {
+			display: inline-block;
+			position: relative;
+
+			& + li {
+
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					width: 1px;
+					height: 1rem;
+					margin-top: -0.5rem;
+					background-color: rgba(255,255,255,.1);
+
+					@include media-breakpoint-down(md) {
+						display: none;
+					}
+				}
+			}
+
+			> a {
+				display: inline-block;
+				padding: .5rem 1rem;
+
+				&:hover,
+				&:focus {
+
+					i {
+						color: $link-color;
+					}
+				}
+			}
+
+				i {
+					font-size: 16px;
+					line-height: 1.2em;
+					vertical-align: middle;
+					position: relative;
+					top: -1px;
+					color: $link-color;
+
+					& + .link-label {
+						margin-left: 0.5625rem;
+					}
+				}
+
+			// Search
+			&.nav-secondary__search {
+				position: relative;
+				margin-left: 0.5rem;
+
+				@include media-breakpoint-up(md) {
+					margin-left: 0;
+				}
+
+				@include media-breakpoint-up(lg) {
+					margin-right: .5rem;
+				}
+			}
+
+			// Log In
+			&.nav-secondary__login {
+
+				@include media-breakpoint-down(md) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// CTA
+	.nav-btn {
+
+		.nav-btn__icon {
+
+			@include media-breakpoint-up(xl) {
+				display: none;
+			}
+
+		}
+
+		.header--is-scroll & {
+
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 36px;
+			height: 36px;
+			padding: 0;
+			text-align: center;
+			line-height: 32px;
+
+			.nav-btn__label {
+				display: none;
+			}
+
+			.nav-btn__icon {
+				margin: 0;
+			}
+		}
+	}
+
+// Header Spacer
+.header__spacer {
+	flex-grow: 1;
+}
+
+
+// Header Mobile Burger Icon
+.burger-menu-icon {
+	display: none;
+}
+
+@include media-breakpoint-down(md) {
+	.burger-menu-icon {
+		transition: all 0.4s ease-in-out;
+		display: block;
+		position: relative;
+		cursor: pointer;
+		width: 26px;
+		flex-shrink: 1;
+		flex-grow: 0;
+		height: 19px;
+		margin-left: .75rem;
+		margin-right: 1rem;
+	}
+
+		.burger-menu-icon__line {
+			cursor: pointer;
+			height: 3px;
+			width: 100%;
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 1;
+			display: block;
+			border-radius: 1px;
+			transform: rotate(0deg);
+			transition: .25s ease-in-out;
+
+			&:nth-child(2) {
+				top: 8px;
+			}
+
+			&:nth-child(3) {
+				top: 16px;
+			}
+		}
+
+
+	// Active
+	.burger-menu-icon--active {
+
+		.burger-menu-icon__line {
+
+			&:nth-child(1) {
+				top: 9px;
+				transform: rotate(135deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+				left: -60px;
+			}
+
+			&:nth-child(3) {
+				top: 9px;
+				transform: rotate(-135deg);
+			}
+		}
+	}
+}
+
+/*=====  End of #Header  ======*/

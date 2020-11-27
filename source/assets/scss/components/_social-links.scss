@@ -1,0 +1,84 @@
+/**
+ *
+ * Social Links
+ *
+ */
+
+.social-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+	.social-links__item {
+		float: left;
+		margin: 0 10px 10px 0;
+	}
+		.social-links__link {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			background-color: rgba(theme-color("light"), .05);
+			font-size: 1.125rem;
+			position: relative;
+			overflow: hidden;
+
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				z-index: 1;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				background-color: transparent;
+				transform: scale(0);
+				transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+				backface-visibility: hidden;
+			}
+
+			&::after {
+				transition-delay: 0.1s;
+			}
+
+			&:hover,
+			&:focus {
+
+				&::before,
+				&::after {
+					transform: scale(1);
+					background-color: $link-hover-color;
+				}
+
+				&::before {
+					transform: scale(1) opacity(0);
+					background-color: $link-color;
+				}
+
+				[class*="fa-"] {
+					color: $link-color;
+				}
+			}
+
+			// Circle
+			.social-links--circle & {
+				border-radius: 50%;
+
+				&::before,
+				&::after {
+					border-radius: 50%;
+				}
+			}
+
+			[class*="fa-"] {
+				display: inline-block;
+				position: relative;
+				vertical-align: middle;
+				z-index: 2;
+				color: $link-color;
+			}
+		}

@@ -1,0 +1,302 @@
+/*=============================================
+=            Slick Slider            =
+=============================================*/
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+	position: absolute;
+	z-index: 1;
+	display: block;
+	height: 46px;
+	width: 46px;
+	line-height: 0;
+	font-size: 0;
+	cursor: pointer;
+	background: transparent;
+	color: transparent;
+	top: 50%;
+	transform: translate(0, -50%);
+	padding: 0;
+	border: none;
+	outline: none;
+	border-radius: 50%;
+	border: 2px solid theme-color("secondary");
+	transition: all .3s ease;
+
+	&:hover,
+	&:focus {
+		outline: none;
+		background-color: theme-color("secondary");
+		color: transparent;
+		&:before {
+			opacity: 1;
+		}
+	}
+
+	&.slick-disabled:before {
+		opacity: .25;
+	}
+
+	&:before {
+		font-family: "Ionicons";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1rem;
+		line-height: 1;
+		color: theme-color("light");
+		opacity: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+.slick-prev {
+	left: -25px;
+
+	[dir="rtl"] & {
+		left: auto;
+		right: -25px;
+	}
+
+	&:before {
+		content: "\f124";
+		[dir="rtl"] & {
+			content: "\f125";
+		}
+	}
+}
+
+.slick-next {
+	right: -25px;
+
+	[dir="rtl"] & {
+		left: -25px;
+		right: auto;
+	}
+
+	&:before {
+		content: "\f125";
+		[dir="rtl"] & {
+			content: "\f124";
+		}
+	}
+}
+
+
+.slick--arrows-top {
+	.slick-prev {
+		right: 56px;
+		left: auto;
+		top: 0;
+		margin-top: -40px;
+		&:before {
+			content: "\f124";
+		}
+	}
+
+	.slick-next {
+		right: 0;
+		top: 0;
+		margin-top: -40px;
+		&:before {
+			content: "\f125";
+		}
+	}
+}
+
+
+
+/* Arrows - Alternative */
+.slick-arrow-divider {
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	margin-left: -1px;
+	bottom: 0;
+	transform: rotate(30deg);
+	width: 2px;
+	height: 100px;
+	background-color: theme-color("secondary");
+
+	.section-content--tertiary & {
+		background-color: #ECECEC;
+	}
+}
+.slick--arrows-modern {
+
+	@include media-breakpoint-up(md) {
+		padding-bottom: 95px;
+	}
+
+	.slick-prev-arrow,
+	.slick-next-arrow {
+		bottom: 37px;
+		position: absolute;
+		z-index: 1;
+		display: block;
+		cursor: pointer;
+		background: transparent;
+		color: transparent;
+		padding: 0;
+		border: none;
+		outline: none;
+		transition: all .3s ease;
+		width: 50px;
+		height: 30px;
+
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 6px;
+			height: 2px;
+			right: 0;
+			top: 15px;
+			background-color: $white;
+			transition: .2s ease all;
+
+			.section-content--tertiary & {
+				background-color: theme-color("secondary");
+			}
+		}
+
+		span {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 15px;
+			width: 48px;
+			height: 2px;
+			background-color: $white;
+			transition: .2s ease all;
+
+			.section-content--tertiary & {
+				background-color: theme-color("secondary");
+			}
+		}
+
+		&:hover {
+
+			&::before,
+			&::after {
+				background-color: theme-color("primary");
+			}
+
+			span {
+				background-color: theme-color("primary");
+			}
+		}
+	}
+
+	.slick-prev-arrow {
+		left: 50%;
+		margin-left: -85px;
+
+		&::before,
+		&::after {
+			right: auto;
+			left: 0;
+		}
+
+		&::before {
+			transform: translateY(-2px) rotate(-45deg);
+		}
+
+		&::after {
+			transform: translateY(2px) rotate(45deg);
+		}
+	}
+
+	.slick-next-arrow {
+		right: 50%;
+		margin-right: -85px;
+
+		&::before {
+			transform: translateY(-2px) translateX(1px) rotate(45deg);
+		}
+
+		&::after {
+			transform: translateY(2px) translateX(1px) rotate(-45deg);
+		}
+	}
+}
+
+
+/* Dots */
+
+.slick-dots {
+	position: absolute;
+	z-index: 2;
+	right: 30px;
+	top: 50%;
+	transform: translateY(-50%);
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	
+	@include media-breakpoint-down(sm) {
+		display: none !important;
+	}
+
+	> li {
+		padding: 0;
+		margin: 0;
+		height: 20px;
+		width: 48px;
+		position: relative;
+		cursor: pointer;
+
+		> button {
+			overflow: hidden;
+			height: 20px;
+			width: 50%;
+			border: none;
+			padding: 0;
+			margin: 0;
+			background: none;
+			font-size: 0;
+			position: relative;
+			z-index: 2;
+			outline: none;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -1px;
+			background-color: rgba(255, 255, 255, .33);
+			height: 2px;
+			width: 50%;
+			pointer-events: none;
+			transition: all 300ms cubic-bezier(0.86, 0, 0.07, 1);
+		}
+
+		&:hover {
+
+			&::before {
+				background-color: theme-color("light");
+				width: 75%;
+			}
+		}
+
+		&.slick-active {
+
+			&::before {
+				background-color: theme-color("light");
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*=====  End of Slick Slider  ======*/

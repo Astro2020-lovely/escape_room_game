@@ -1,0 +1,35 @@
+/**
+ *
+ * Widget: Schedule
+ *
+ */
+
+.widget-schedule {
+
+}
+	.schedule-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: table;
+	}
+		.schedule__item {
+			display: table-row;
+		}
+			.schedule__title {
+				display: table-cell;
+				padding-bottom: 1rem;
+				padding-right: 1.5rem;
+
+				.schedule__item:last-child & {
+					padding-bottom: 0;
+				}
+			}
+			.schedule__time {
+				display: table-cell;
+				padding-bottom: 1rem;
+
+				.schedule__item:last-child & {
+					padding-bottom: 0;
+				}
+			}

@@ -1,0 +1,672 @@
+/*----------  Booked - Responsive  ----------*/
+
+@media screen and (max-width: 1200px){
+
+	.booked-list-view {
+
+		.booked-appt-list {
+
+			h2 {
+				text-align: left;
+				margin: 0 0 20px;
+
+				&.booked-no-prev {
+					text-align: left;
+				}
+			}
+		}
+
+		.booked-list-view-nav {
+			display: block;
+			height: 26px;
+			margin: -5px 0 30px;
+			position: static;
+			text-align: left;
+
+			.booked-list-view-date-next,
+			.booked-list-view-date-prev {
+				margin: 0 6px 5px 0;
+				position: relative;
+				display: inline-block;
+				top: 0;
+				right: 0;
+			}
+
+			.booked-list-view-date-next {
+				float: right;
+				margin: 0 0 5px;
+			}
+		}
+	}
+}
+
+
+@media screen and ( max-width: 1100px ){
+
+	table.booked-calendar {
+
+		td {
+
+			.count {
+				padding: 5px 0;
+				font-size: 9px;
+			}
+
+			.date {
+
+				.number {
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and ( max-width: 860px ){
+
+	#booked-profile-page {
+
+		.booked-profile-header {
+			padding: 30px;
+		}
+
+		.booked-user-avatar {
+			width: 54px;
+			height: 54px;
+		}
+
+		.booked-user {
+
+			h3 {
+				padding-left: 12px;
+			}
+		}
+
+		.booked-profile-appt-list {
+			float: none;
+			width: 100%;
+			margin: 0 0 30px;
+
+			.appt-block {
+
+				.status-block {
+					float: right;
+					margin: 6px 0 0 0;
+				}
+			}
+		}
+
+		#profile-edit {
+			float: none;
+			width: 100%;
+			margin: 0;
+		}
+
+		.booked-tab-content {
+			padding: $box-padding-sm;
+		}
+	}
+
+}
+
+@media screen and ( max-width: 720px ){
+
+	.booked-calendar-wrap {
+
+		table.booked-calendar {
+
+			thead {
+
+				th {
+					font-size: 16px;
+					padding: 13px 0 10px;
+
+					.page-left {
+						left: 10px;
+						top: 5px;
+						font-size: 15px;
+
+						&:hover {
+							left: 9px;
+						}
+					}
+
+					.page-right {
+						right: 10px;
+						top: 5px;
+						font-size: 15px;
+
+						&:hover {
+							right: 9px;
+						}
+					}
+
+					.monthName {
+						height: auto;
+						display: inline-block;
+						font-size: 1rem;
+
+						a {
+							top: -2px;
+							font-size: 10px;
+						}
+					}
+				}
+
+				tr.days {
+
+					th {
+						font-size: 11px;
+						padding: 7px 0 5px;
+					}
+				}
+			}
+
+			td {
+				font-size: 13px;
+				height: 50px;
+
+				.count {
+					display: none;
+				}
+
+				.date {
+					height: 100%;
+					line-height: 50px;
+
+					.number {
+						border: none;
+						display: block;
+						border-radius: 0;
+						transform: scale(1);
+						width: 100%;
+						height: 100%;
+						vertical-align: middle;
+						line-height: 50px;
+					}
+				}
+
+				&.blur {
+
+					.date,
+					&:hover .date {
+						cursor: default;
+						background: #eee;
+						color: #ddd;
+					}
+				}
+
+				&.booked {
+
+					.date,
+					&:hover .date {
+						cursor: default;
+						background: #FFE4DF;
+						color: #F15934;
+					}
+				}
+
+				&.today {
+
+					.date {
+						background: $booked_today_active_bgcolor;
+						color: $booked_today_active_color;
+					}
+
+					&:hover {
+
+						.date {
+							background: #eff7fb;
+							color: #555;
+						}
+					}
+				}
+
+				&:hover {
+
+					.date {
+						background: #f9f9f9;
+						cursor: pointer;
+						color: #000;
+					}
+				}
+			}
+
+			&.prev-date {
+
+				&,
+				&:hover {
+
+					.date {
+						cursor: default;
+						background: #f9f9f9;
+						color: #bbb;
+					}
+				}
+			}
+
+			tr.week {
+
+				td.active {
+
+					.date {
+
+						.number {
+							border: none;
+							background: none;
+							color: $booked_today_active_bgcolor;
+						}
+					}
+
+					&,
+					&:hover {
+
+						.date {
+							background: $booked_today_active_cell_bgcolor;
+						}
+					}
+				}
+			}
+
+			tr.entryBlock {
+
+				td {
+					padding: 5%;
+				}
+			}
+
+
+			.booked-appt-list {
+				max-height: 300px;
+				overflow-y: auto;
+				overflow-x: hidden;
+				padding: 15px 20px 10px;
+			}
+		}
+
+		&.small {
+
+			table.booked-calendar {
+
+				.booked-appt-list {
+					max-height: 300px;
+				}
+			}
+		}
+
+		.booked-appt-list {
+
+			.timeslot {
+
+				button {
+					border-radius: 3px;
+
+					.spots-available {
+						display: block;
+					}
+
+					.timeslot-mobile-title {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+
+	table.booked-calendar {
+
+		.booked-appt-list {
+
+			h2 {
+				text-align: center;
+				margin: 5px 0 20px;
+				font-size: 15px;
+				letter-spacing: 0.03em;
+
+				span {
+					display: none;
+				}
+			}
+
+			.timeslot {
+				border-top: 0;
+				margin: 0 0 10px;
+
+				.timeslot-time,
+				.timeslot-count {
+					display: none;
+				}
+
+				button .spots-available {
+					display: block;
+				}
+
+				.timeslot-mobile-title {
+					display: block;
+				}
+
+				.timeslot-people {
+
+					&,
+					&:hover {
+						width: 100%;
+						padding: 0;
+						height: auto;
+					}
+
+					button {
+						white-space: normal;
+						float: none;
+						margin: 0;
+						width: 100%;
+						text-align: center;
+						padding: 7px 0;
+						line-height: 1.5;
+
+						.button-timeslot {
+							display: block;
+							font-weight: 600;
+							font-size: 13px;
+						}
+
+						.button-text {
+							display: none;
+						}
+					}
+				}
+
+				&.timeslot-count-hidden {
+
+					.timeslot-people {
+
+						&,
+						&:hover {
+							width: 100%;
+							padding: 0;
+							height: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#booked-profile-page {
+
+		.result-section {
+
+			&.table-layout {
+				padding: 10px 0;
+
+				.table-box {
+
+					.cell-title {
+
+						.compact-img {
+
+							img {
+								top: 46px;
+								left: 12px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.booked-tabs {
+
+			li {
+				width: 100%;
+
+				&,
+				&.edit-button {
+					display: block;
+					float: none;
+				}
+
+				a {
+					border-left: none;
+					border-right: none;
+				}
+
+				&.edit-button {
+
+					a {
+						border-left: none;
+						border-right: none;
+					}
+				}
+			}
+		}
+	}
+
+	.booked-modal {
+		padding: 0;
+		margin: 20px;
+
+		.bm-window {
+			width: 100%;
+			padding: 43px 0 0;
+			box-sizing: border-box;
+			border-radius: 6px;
+
+			.booked-scrollable {
+				padding: 30px 35px;
+			}
+
+			p.name {
+
+				b {
+					display: block;
+				}
+			}
+		}
+
+		.bm-overlay {
+			background: rgba(0, 0, 0, 0.8);
+		}
+	}
+
+	.booked-list-view .booked-appt-list .timeslot.has-title.booked-hide-time .timeslot-people button .button-timeslot,
+	.booked-calendar-wrap .booked-appt-list .timeslot.has-title.booked-hide-time .timeslot-people button .button-timeslot { display:none; }
+
+}
+
+
+@media screen and ( max-width: 600px ){
+
+	.booked-modal {
+
+		input[type="submit"] {
+			margin: 0 10px 10px 0;
+			float: none;
+		}
+
+		.button {
+			width: 100%;
+			float: none;
+		}
+	}
+
+	.booked-calendarSwitcher {
+		width: 100%;
+		display: block;
+		padding: 8px 5px;
+
+		i.booked-icon {
+			display: none;
+		}
+
+		select {
+			width: 100%;
+		}
+	}
+
+	#booked-profile-page {
+
+		.booked-profile-header {
+			padding: 20px;
+		}
+
+		.booked-user-avatar {
+			width: 40px;
+			height: 40px;
+		}
+
+		.booked-info {
+			flex-wrap: wrap;
+		}
+
+		.booked-user {
+			padding-bottom: 10px;
+
+			h3 {
+				font-size: 1rem;
+				padding-left: 10px;
+			}
+		}
+
+		.booked-profile-appt-list {
+
+			.appt-block {
+
+				.status-block {
+					display: block;
+					float: none;
+					margin: 0 0 10px;
+				}
+			}
+		}
+	}
+
+	#profile-edit {
+
+		#booked-page-form {
+
+			p.form-nickname,
+			p.form-email,
+			p.form-url,
+			p.form-password {
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+
+	.booked-modal {
+
+		#customerChoices {
+
+			.field {
+				display: block;
+				float: none;
+				margin: 5px 0;
+			}
+		}
+	}
+}
+
+
+@media screen and ( max-width: 450px ){
+
+	.booked-list-view {
+
+		.booked-appt-list {
+
+			h2 {
+
+				strong {
+					display: block;
+					margin: 0 auto;
+				}
+
+				span {
+
+					&:last-child {
+						display: none;
+					}
+				}
+			}
+
+			.timeslot {
+				border-top: 0;
+				margin: 0 0 10px;
+
+				.timeslot-time,
+				.timeslot-count {
+					display: none;
+				}
+
+				.timeslot-people {
+					width: 100%;
+					padding: 0;
+					height: auto;
+
+					button {
+						float: none;
+						margin: 0;
+						width: 100%;
+						text-align: center;
+						padding: 7px 0;
+						line-height: 1.5;
+
+						.button-timeslot {
+							display: block;
+							font-weight: 600;
+							font-size: 13px;
+						}
+
+						.button-text {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.booked-calendar-wrap {
+
+		.booked-appt-list {
+
+			.timeslot {
+
+				.timeslot-people {
+
+					button {
+
+						.timeslot-mobile-title {
+							display: block;
+						}
+					}
+				}
+
+				&.timeslot-count-hidden {
+
+					.timeslot-people {
+						height: auto;
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+
+	#booked-page-form {
+
+		.login-remember {
+			float: none;
+			margin: 1rem 0 0 0;
+		}
+
+		.login-submit {
+			float: none;
+			margin: 0;
+		}
+	}
+}

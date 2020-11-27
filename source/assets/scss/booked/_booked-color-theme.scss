@@ -1,0 +1,90 @@
+/*----------  Booked - Color Theme  ----------*/
+
+/* Light Color */
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active,
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover,
+#booked-profile-page input[type="submit"].button-primary:hover,
+.booked-list-view button.button:hover,
+.booked-list-view input[type="submit"].button-primary:hover,
+table.booked-calendar input[type="submit"].button-primary:hover,
+.booked-modal input[type="submit"].button-primary:hover,
+table.booked-calendar th,
+table.booked-calendar thead,
+table.booked-calendar thead th,
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,
+#booked-profile-page .booked-profile-header,
+#booked-profile-page .booked-tabs li.active a,
+#booked-profile-page .booked-tabs li.active a:hover,
+#booked-profile-page .booked-tabs li a.active,
+#booked-profile-page .booked-tabs li a.active:hover,
+#booked-profile-page .appt-block .google-cal-button > a:hover,
+#ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header
+{ background: $booked_light_color; }
+
+#booked-profile-page input[type="submit"].button-primary:hover,
+table.booked-calendar input[type="submit"].button-primary:hover,
+.booked-list-view button.button:hover,
+.booked-list-view input[type="submit"].button-primary:hover,
+.booked-modal input[type="submit"].button-primary:hover,
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,
+#booked-profile-page .booked-profile-header,
+#booked-profile-page .appt-block .google-cal-button > a:hover
+{ border-color: $booked_light_color; }
+
+
+/* Dark Color */
+table.booked-calendar tr.days,
+table.booked-calendar tr.days th,
+.booked-calendarSwitcher.calendar,
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead,
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th
+{ background: $booked_dark_color; }
+
+#booked-profile-page .booked-tabs {
+	background-color: #333;
+}
+
+table.booked-calendar tr.days th
+{ border-color: $booked_dark_color; }
+
+
+/* Primary Button Color */
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a,
+#ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a:hover,
+#booked-profile-page input[type="submit"].button-primary,
+table.booked-calendar input[type="submit"].button-primary,
+.booked-list-view button.button,
+.booked-list-view input[type="submit"].button-primary,
+.booked-list-view button.button,
+.booked-list-view input[type="submit"].button-primary,
+.booked-modal input[type="submit"].button-primary,
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,
+#booked-profile-page .appt-block .google-cal-button > a,
+.booked-modal p.booked-title-bar,
+table.booked-calendar td:hover .date span,
+.booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,
+.booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover,
+.booked-ms-modal .booked-book-appt /* Multi-Slot Booking */
+{ background: $booked_button_color; }
+
+#booked-profile-page input[type="submit"].button-primary,
+table.booked-calendar input[type="submit"].button-primary,
+.booked-list-view button.button,
+.booked-list-view input[type="submit"].button-primary,
+.booked-list-view button.button,
+.booked-list-view input[type="submit"].button-primary,
+.booked-modal input[type="submit"].button-primary,
+#booked-profile-page .appt-block .google-cal-button > a,
+table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,
+.booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,
+.booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover
+{ border-color: $booked_button_color; }
+
+.booked-modal .bm-window p i.fa,
+.booked-modal .bm-window a,
+.booked-appt-list .booked-public-appointment-title,
+.booked-modal .bm-window p.appointment-title,
+.booked-ms-modal.visible:hover .booked-book-appt
+{ color: $booked_button_color; }
+
+.booked-appt-list .timeslot.has-title .booked-public-appointment-title { color: inherit; }

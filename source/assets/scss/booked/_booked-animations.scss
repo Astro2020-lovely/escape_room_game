@@ -1,0 +1,38 @@
+/*----------  Booked - Animations  ----------*/
+
+/* Modal Fly In */
+@keyframes booked-flyin {
+	0% { opacity: 0; transform: scale(0.9); }
+	100% { opacity: 1; transform: scale(1); }
+}
+
+/* Datepicker Pop Flyin */
+@keyframes booked-popflyin {
+	0% { opacity: 0; transform: scale(0.95); }
+	50% { opacity: 1; transform: scale(1.01); }
+	100% { opacity: 1; transform: scale(1); }
+}
+
+/* Modal Fly Out */
+@keyframes booked-flyout {
+	0% { opacity: 1; transform: scale(1); }
+	100% { opacity: 0; transform: scale(0.9); }
+}
+
+/* Hidden Custom Fields Pop Down */
+@keyframes booked-popdown {
+	0% { opacity: 0; transform: translateY(-5px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Modal Fade In */
+@keyframes booked-fadein {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+/* Modal Fade Out */
+@keyframes booked-fadeout {
+	0% { opacity: 1; }
+	100% { opacity: 9; }
+}

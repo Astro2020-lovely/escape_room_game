@@ -1,0 +1,106 @@
+/**
+ *
+ * Room Meta
+ *
+ */
+
+.room__meta {
+	margin-bottom: 1rem;
+}
+	.room__meta-item {
+		display: inline-block;
+		font-family: $font-family-accent;
+		color: $room-meta-color;
+		font-size: .6875rem;
+		text-transform: uppercase;
+		font-weight: $font-weight-bold;
+		margin-right: .75rem;
+
+		@include media-breakpoint-up(lg) {
+			margin-right: 1.5rem;
+
+			.col-md-3 & {
+				margin-right: .75rem;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		i {
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			top: -1px;
+			color: $room-meta-icon-color;
+			font-size: 16px;
+			font-weight: 400;
+			margin-right: .5rem;
+		}
+	}
+
+
+
+/**
+ *
+ * Room Meta on Single Page
+ *
+ */
+
+.room__meta--lg {
+	display: flex;
+	overflow: hidden;
+	margin-bottom: 2.375rem;
+
+	.rating {
+		margin: 0 auto;
+	}
+
+	.room__meta-item {
+		flex-grow: 1;
+		position: relative;
+		text-align: center;
+		padding: .2rem 0;
+
+		&:not(:first-child)::before {
+			content: "";
+			display: block;
+			width: 1px;
+			height: 100px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			background-color: rgba(255,255,255,.1);
+		}
+	}
+
+	.room__meta-item--rating {
+		padding-top: 0.5rem;
+
+		.room__meta-item-value {
+			margin-bottom: 0;
+		}
+	}
+		.room__meta-item {
+
+			i {
+
+				@include media-breakpoint-up(sm) {
+					font-size: 20px;
+					line-height: 1.2em;
+				}
+			}
+		}
+		.room__meta-item-value {
+			min-height: 2rem;
+			margin-bottom: 0.5rem;
+
+			@include media-breakpoint-up(sm) {
+				font-size: 1.125rem;
+			}
+		}
+		.room__meta-item-label {
+			color: theme-color("light");
+		}
+}

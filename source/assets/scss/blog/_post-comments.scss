@@ -1,0 +1,87 @@
+/**
+ *
+ * Post Comments
+ *
+ */
+
+// Comments Section
+.post-comments {
+	margin-bottom: 5rem;
+}
+
+// Comments List
+.comments {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	.children {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		@include media-breakpoint-up(md) {
+			margin-left: 68px;
+		}
+	}
+}
+	.comments__item {
+
+	}
+		.comments__inner {
+			margin-bottom: 3.125rem;
+		}
+
+			// Comment Header
+			.comment__header {
+
+			}
+				.comment__author {
+					display: flex;
+					align-items: center;
+					margin-bottom: 1.5rem;
+				}
+					.comment__author-avatar {
+						flex-shrink: 1;
+						width: 68px;
+						height: 68px;
+						overflow: hidden;
+						border-radius: 50%;
+						margin: 0 1rem 0 0;
+					}
+					.comment__author-info {
+
+					}
+						.comment__author-name {
+							font-size: 1rem;
+							margin-bottom: 0;
+						}
+						.comment__post-date {
+							font-size: .8125rem;
+						}
+
+			// Comment Body
+			.comment__body {
+				margin-bottom: 1.25rem;
+
+				p:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			// Comment Footer
+			.comment__footer {
+
+			}
+				.comment__reply-link {
+					display: inline-block;
+					font-family: $font-family-accent;
+					font-size: .6875rem;
+					text-transform: uppercase;
+					letter-spacing: .27em;
+				}
+
+	.bypostauthor {
+		border-left: 4px solid theme-color("primary");
+		padding-left: 2rem;
+	}

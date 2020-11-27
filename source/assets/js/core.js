@@ -1,0 +1,8 @@
+//=include '../vendor/jarallax/jarallax.js'
+//=include '../vendor/jpinning/jPinning.js'
+//=include '../vendor/instafeed/instafeed.js'
+//=include '../vendor/imagesloaded/imagesloaded.pkgd.js'
+//=include '../vendor/isotope/dist/isotope.pkgd.js'
+//=include '../vendor/slick/slick.js'
+//=include '../vendor/magnific-popup/jquery.magnific-popup.js'
+//=include '../vendor/aos/aos.js'

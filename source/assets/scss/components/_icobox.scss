@@ -1,0 +1,95 @@
+/**
+ *
+ * Icobox
+ *
+ */
+
+.icobox {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+	.icobox__icon-wrapper {
+		position: relative;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+
+		@include media-breakpoint-up(md) {
+			padding-top: 24px;
+			padding-bottom: 24px;
+			margin-bottom: 1.5rem;
+		}
+
+		@include media-breakpoint-up(lg) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			margin-bottom: 2rem;
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			margin-left: -1px;
+			background-color: theme-color("secondary");
+			transform: rotate(-330deg);
+		}
+	}
+		.icobox__icon {
+			border: 2px solid theme-color("secondary");
+			border-radius: 50%;
+			margin: 0 auto;
+			color: theme-color("light");
+			position: relative;
+			background-color: $body-bg;
+			width: 72px;
+			height: 72px;
+			line-height: 66px;
+			font-size: 32px;
+
+			.section-content--secondary & {
+				background-color: $section-secondary-bg;
+			}
+
+			.section-content--tertiary & {
+				background-color: $section-tertiary-bg;
+			}
+
+			@include media-breakpoint-up(md) {
+				width: 100px;
+				height: 100px;
+				line-height: 96px;
+				font-size: 42px;
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: 120px;
+				height: 120px;
+				line-height: 116px;
+				font-size: 52px;
+			}
+
+			i {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+	.icobox__title {
+
+		@include media-breakpoint-down(sm) {
+			font-size: 1.25rem;
+		}
+	}
+
+	.icobox__desc {
+
+		@include media-breakpoint-up(lg) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
